@@ -21,7 +21,6 @@ def crear_periodos():
     print("Creando periodos academicos...")
     periodos = []
 
-
     periodo1, _ = Periodo.objects.get_or_create(
         nombre="Primer Trimestre",
         trimestre="PRIMERO",
@@ -31,7 +30,6 @@ def crear_periodos():
     )
     periodos.append(periodo1)
 
-
     periodo2, _ = Periodo.objects.get_or_create(
         nombre="Segundo Trimestre",
         trimestre="SEGUNDO",
@@ -40,7 +38,6 @@ def crear_periodos():
         fecha_fin=datetime(2025, 2, 28)
     )
     periodos.append(periodo2)
-
 
     periodo3, _ = Periodo.objects.get_or_create(
         nombre="Tercer Trimestre",
@@ -80,7 +77,6 @@ def crear_asistencias(cursos, fechas):
         estudiantes = User.objects.filter(curso=curso, role='ESTUDIANTE')
         materias = curso.materias.all()
 
-
         fechas_muestra = random.sample(fechas, min(len(fechas), 30))
 
         for fecha in fechas_muestra:
@@ -117,7 +113,6 @@ def crear_participaciones(cursos, fechas):
     for curso in cursos:
         estudiantes = User.objects.filter(curso=curso, role='ESTUDIANTE')
         materias = curso.materias.all()
-
 
         fechas_muestra = random.sample(fechas, min(len(fechas), 20))
 
@@ -160,12 +155,11 @@ def crear_notas(periodos, cursos):
 
             for estudiante in estudiantes:
                 for materia in materias:
-git init
+                    # Componentes de evaluacion
                     ser = Decimal(str(round(random.uniform(6, 10), 2)))
                     saber = Decimal(str(round(random.uniform(20, 35), 2)))
                     hacer = Decimal(str(round(random.uniform(20, 35), 2)))
                     decidir = Decimal(str(round(random.uniform(6, 10), 2)))
-
 
                     auto_ser = Decimal(str(round(random.uniform(3, 5), 2)))
                     auto_decidir = Decimal(str(round(random.uniform(3, 5), 2)))
@@ -197,7 +191,6 @@ def poblar():
     if not Curso.objects.exists() or not User.objects.filter(role='ESTUDIANTE').exists():
         print("Error: No hay cursos o estudiantes en la base de datos")
         return
-
 
     with transaction.atomic():
         periodos = crear_periodos()
