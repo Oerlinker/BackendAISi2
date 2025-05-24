@@ -187,7 +187,7 @@ def crear_notas(periodos, cursos):
 
 
 def poblar():
-    # Verificar datos existentes
+
     if not Curso.objects.exists() or not User.objects.filter(role='ESTUDIANTE').exists():
         print("Error: No hay cursos o estudiantes en la base de datos")
         return
