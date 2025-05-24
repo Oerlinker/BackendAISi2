@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd backend && pip install -r requirements.txt && python manage.py collectstatic --noinput"
+
+[deploy]
+startCommand = "cd backend && gunicorn aula_inteligente.wsgi --log-file -"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+
+[phases.setup]
+nixPkgs = ["python311", "postgresql"]
