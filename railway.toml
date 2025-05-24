@@ -1,14 +1,14 @@
 [build]
 builder = "nixpacks"
-buildCommand = "apt-get update && apt-get install -y python3-full python3-venv && python3 -m venv /app/venv && . /app/venv/bin/activate && cd backend && pip install -r requirements.txt && python manage.py collectstatic --noinput"
 
 [deploy]
-startCommand = ". /app/venv/bin/activate && cd backend && gunicorn aula_inteligente.wsgi --log-file -"
+startCommand = "cd backend && gunicorn aula_inteligente.wsgi --log-file -"
 healthcheckPath = "/"
-healthcheckTimeout = 300
-
-[phases.setup]
-nixPkgs = ["python311", "postgresql"]
+restartPolicyType = "on_failure"
 
 [nixpacks]
 python-version = "3.11"
+
+[variables]
+NIXPACKS_PYTHON_BACKEND_RELATIVE_PATH = "./backend"
+
