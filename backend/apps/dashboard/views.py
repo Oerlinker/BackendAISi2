@@ -15,8 +15,14 @@ class DashboardGeneralView(APIView):
 
     def get(self, request):
         total_estudiantes = User.objects.filter(role='ESTUDIANTE').count()
+        total_materias = Materia.objects.count()
 
         promedio_general = Nota.objects.aggregate(promedio=Avg('nota_total'))['promedio'] or 0
+
+        # Calcular promedio de asistencia
+        total_asistencias = Asistencia.objects.count()
+        presentes = Asistencia.objects.filter(estado='PRESENTE').count()
+        asistencia_promedio = (presentes / total_asistencias * 100) if total_asistencias > 0 else 0
 
         predicciones_distribucion = Prediccion.objects.values('nivel_rendimiento').annotate(
             cantidad=Count('id')
@@ -34,7 +40,9 @@ class DashboardGeneralView(APIView):
 
         return Response({
             'total_estudiantes': total_estudiantes,
+            'total_materias': total_materias,
             'promedio_general': round(promedio_general, 2),
+            'asistencia_promedio': round(asistencia_promedio, 2),
             'predicciones_distribucion': predicciones_distribucion,
             'materias_stats': materias_stats,
             'trimestres_stats': trimestres_stats
