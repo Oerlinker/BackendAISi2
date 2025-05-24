@@ -18,7 +18,19 @@ class DashboardGeneralView(APIView):
             total_estudiantes = User.objects.filter(role='ESTUDIANTE').count()
             total_materias = Materia.objects.count()
 
-            promedio_general = Nota.objects.aggregate(promedio=Avg('nota_total'))['promedio'] or 0
+            # Calcular promedio general sumando los componentes individuales
+            notas = Nota.objects.all()
+            if notas.exists():
+                suma_total = 0
+                cantidad_notas = 0
+                for nota in notas:
+                    suma_total += (nota.ser_puntaje + nota.saber_puntaje +
+                                  nota.hacer_puntaje + nota.decidir_puntaje +
+                                  nota.autoevaluacion_ser + nota.autoevaluacion_decidir)
+                    cantidad_notas += 1
+                promedio_general = suma_total / cantidad_notas if cantidad_notas > 0 else 0
+            else:
+                promedio_general = 0
 
             # Calcular promedio de asistencia con manejo seguro de caso cero
             total_asistencias = Asistencia.objects.count()
@@ -32,15 +44,50 @@ class DashboardGeneralView(APIView):
                 cantidad=Count('id')
             ).order_by('nivel_rendimiento')
 
-            materias_stats = Materia.objects.annotate(
-                total_estudiantes=Count('nota__estudiante', distinct=True),
-                promedio_notas=Avg('nota__nota_total')
-            ).values('id', 'nombre', 'total_estudiantes', 'promedio_notas')
+            # Añadimos funcionalidad para calcular estadísticas por materia sin usar nota_total
+            materias_stats = []
+            for materia in Materia.objects.all():
+                notas_materia = Nota.objects.filter(materia=materia)
+                total_estudiantes = notas_materia.values('estudiante').distinct().count()
+                if notas_materia.exists():
+                    suma_notas = 0
+                    for nota in notas_materia:
+                        suma_notas += (nota.ser_puntaje + nota.saber_puntaje +
+                                      nota.hacer_puntaje + nota.decidir_puntaje +
+                                      nota.autoevaluacion_ser + nota.autoevaluacion_decidir)
+                    promedio_notas = suma_notas / notas_materia.count()
+                else:
+                    promedio_notas = 0
 
-            trimestres_stats = Periodo.objects.values('trimestre').annotate(
-                promedio=Avg('nota__nota_total'),
-                estudiantes=Count('nota__estudiante', distinct=True)
-            ).order_by('trimestre')
+                materias_stats.append({
+                    'id': materia.id,
+                    'nombre': materia.nombre,
+                    'total_estudiantes': total_estudiantes,
+                    'promedio_notas': round(promedio_notas, 2)
+                })
+
+            # Añadimos funcionalidad para calcular estadísticas por trimestre sin usar nota_total
+            trimestres_stats = []
+            for periodo in Periodo.objects.all():
+                notas_periodo = Nota.objects.filter(periodo=periodo)
+                estudiantes_count = notas_periodo.values('estudiante').distinct().count()
+                if notas_periodo.exists():
+                    suma_notas = 0
+                    for nota in notas_periodo:
+                        suma_notas += (nota.ser_puntaje + nota.saber_puntaje +
+                                      nota.hacer_puntaje + nota.decidir_puntaje +
+                                      nota.autoevaluacion_ser + nota.autoevaluacion_decidir)
+                    promedio = suma_notas / notas_periodo.count()
+                else:
+                    promedio = 0
+
+                trimestres_stats.append({
+                    'trimestre': periodo.trimestre,
+                    'promedio': round(promedio, 2),
+                    'estudiantes': estudiantes_count
+                })
+
+            trimestres_stats.sort(key=lambda x: x['trimestre'])
 
             return Response({
                 'total_estudiantes': total_estudiantes,
