@@ -14,39 +14,49 @@ class DashboardGeneralView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        total_estudiantes = User.objects.filter(role='ESTUDIANTE').count()
-        total_materias = Materia.objects.count()
+        try:
+            total_estudiantes = User.objects.filter(role='ESTUDIANTE').count()
+            total_materias = Materia.objects.count()
 
-        promedio_general = Nota.objects.aggregate(promedio=Avg('nota_total'))['promedio'] or 0
+            promedio_general = Nota.objects.aggregate(promedio=Avg('nota_total'))['promedio'] or 0
 
-        # Calcular promedio de asistencia
-        total_asistencias = Asistencia.objects.count()
-        presentes = Asistencia.objects.filter(estado='PRESENTE').count()
-        asistencia_promedio = (presentes / total_asistencias * 100) if total_asistencias > 0 else 0
+            # Calcular promedio de asistencia con manejo seguro de caso cero
+            total_asistencias = Asistencia.objects.count()
+            if total_asistencias > 0:
+                presentes = Asistencia.objects.filter(estado='PRESENTE').count()
+                asistencia_promedio = (presentes / total_asistencias) * 100
+            else:
+                asistencia_promedio = 0
 
-        predicciones_distribucion = Prediccion.objects.values('nivel_rendimiento').annotate(
-            cantidad=Count('id')
-        ).order_by('nivel_rendimiento')
+            predicciones_distribucion = Prediccion.objects.values('nivel_rendimiento').annotate(
+                cantidad=Count('id')
+            ).order_by('nivel_rendimiento')
 
-        materias_stats = Materia.objects.annotate(
-            total_estudiantes=Count('nota__estudiante', distinct=True),
-            promedio_notas=Avg('nota__nota_total')
-        ).values('id', 'nombre', 'total_estudiantes', 'promedio_notas')
+            materias_stats = Materia.objects.annotate(
+                total_estudiantes=Count('nota__estudiante', distinct=True),
+                promedio_notas=Avg('nota__nota_total')
+            ).values('id', 'nombre', 'total_estudiantes', 'promedio_notas')
 
-        trimestres_stats = Periodo.objects.values('trimestre').annotate(
-            promedio=Avg('nota__nota_total'),
-            estudiantes=Count('nota__estudiante', distinct=True)
-        ).order_by('trimestre')
+            trimestres_stats = Periodo.objects.values('trimestre').annotate(
+                promedio=Avg('nota__nota_total'),
+                estudiantes=Count('nota__estudiante', distinct=True)
+            ).order_by('trimestre')
 
-        return Response({
-            'total_estudiantes': total_estudiantes,
-            'total_materias': total_materias,
-            'promedio_general': round(promedio_general, 2),
-            'asistencia_promedio': round(asistencia_promedio, 2),
-            'predicciones_distribucion': predicciones_distribucion,
-            'materias_stats': materias_stats,
-            'trimestres_stats': trimestres_stats
-        })
+            return Response({
+                'total_estudiantes': total_estudiantes,
+                'total_materias': total_materias,
+                'promedio_general': round(promedio_general, 2),
+                'asistencia_promedio': round(asistencia_promedio, 2),
+                'predicciones_distribucion': predicciones_distribucion,
+                'materias_stats': materias_stats,
+                'trimestres_stats': trimestres_stats
+            })
+        except Exception as e:
+            print(f"Error en DashboardGeneralView: {str(e)}")
+            return Response(
+                {"error": "Ha ocurrido un error al obtener las estadísticas"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 
 
 class DashboardEstudianteView(APIView):
