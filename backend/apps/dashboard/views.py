@@ -23,7 +23,7 @@ class DashboardGeneralView(APIView):
             # Calcular promedio de asistencia con manejo seguro de caso cero
             total_asistencias = Asistencia.objects.count()
             if total_asistencias > 0:
-                presentes = Asistencia.objects.filter(estado='PRESENTE').count()
+                presentes = Asistencia.objects.filter(presente=True).count()
                 asistencia_promedio = (presentes / total_asistencias) * 100
             else:
                 asistencia_promedio = 0
