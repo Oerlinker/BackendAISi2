@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, pagination
 from .models import Participacion
 from .serializers import ParticipacionSerializer
 from rest_framework.decorators import action
@@ -6,12 +6,19 @@ from rest_framework.response import Response
 from django.db.models import Avg, Count
 
 
+class ParticipacionPagination(pagination.PageNumberPagination):
+    page_size = 50
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
+
 class ParticipacionViewSet(viewsets.ModelViewSet):
     serializer_class = ParticipacionSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = ParticipacionPagination
 
     def get_queryset(self):
-        queryset = Participacion.objects.all()
+        queryset = Participacion.objects.select_related('estudiante', 'materia')
         estudiante_id = self.request.query_params.get('estudiante')
         materia_id = self.request.query_params.get('materia')
         fecha_inicio = self.request.query_params.get('fecha_inicio')
@@ -33,14 +40,13 @@ class ParticipacionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def estadisticas_participacion(self, request):
-
         estudiante_id = request.query_params.get('estudiante')
         materia_id = request.query_params.get('materia')
 
         if not estudiante_id or not materia_id:
             return Response({"error": "Se requieren los IDs de estudiante y materia"}, status=400)
 
-        participaciones = Participacion.objects.filter(
+        participaciones = Participacion.objects.select_related('estudiante', 'materia').filter(
             estudiante__id=estudiante_id,
             materia__id=materia_id
         )
