@@ -73,7 +73,7 @@ class UserListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        # Solo los administradores y profesores pueden listar usuarios
+
         if request.user.role not in ['ADMINISTRATIVO', 'PROFESOR']:
             return Response(
                 {"detail": "No tienes permiso para listar usuarios."},
@@ -82,12 +82,12 @@ class UserListView(APIView):
 
         queryset = User.objects.all()
 
-        # Filtro por rol si se especifica
+
         rol = request.query_params.get('rol')
         if rol:
             queryset = queryset.filter(role=rol)
 
-        # Se podrían añadir más filtros aquí si es necesario
+
 
         serializer = UserProfileSerializer(queryset, many=True)
         return Response(serializer.data)
