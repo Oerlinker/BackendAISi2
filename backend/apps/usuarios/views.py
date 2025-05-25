@@ -88,7 +88,6 @@ class UserListView(APIView):
             queryset = queryset.filter(role=rol)
 
 
-
         serializer = UserProfileSerializer(queryset, many=True)
         return Response(serializer.data)
 
