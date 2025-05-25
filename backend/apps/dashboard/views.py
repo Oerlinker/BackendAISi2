@@ -48,7 +48,7 @@ class DashboardGeneralView(APIView):
             materias_stats = []
             for materia in Materia.objects.all():
                 notas_materia = Nota.objects.filter(materia=materia)
-                total_estudiantes = notas_materia.values('estudiante').distinct().count()
+                # Usamos el total de estudiantes general en lugar de contar por materia
                 if notas_materia.exists():
                     suma_notas = 0
                     for nota in notas_materia:
@@ -62,7 +62,7 @@ class DashboardGeneralView(APIView):
                 materias_stats.append({
                     'id': materia.id,
                     'nombre': materia.nombre,
-                    'total_estudiantes': total_estudiantes,
+                    'total_estudiantes': total_estudiantes,  # Usamos el total general de estudiantes
                     'promedio_notas': round(promedio_notas, 2)
                 })
 
@@ -70,7 +70,7 @@ class DashboardGeneralView(APIView):
             trimestres_stats = []
             for periodo in Periodo.objects.all():
                 notas_periodo = Nota.objects.filter(periodo=periodo)
-                estudiantes_count = notas_periodo.values('estudiante').distinct().count()
+                # Usamos el total de estudiantes general en lugar de contar por periodo
                 if notas_periodo.exists():
                     suma_notas = 0
                     for nota in notas_periodo:
@@ -84,7 +84,7 @@ class DashboardGeneralView(APIView):
                 trimestres_stats.append({
                     'trimestre': periodo.trimestre,
                     'promedio': round(promedio, 2),
-                    'estudiantes': estudiantes_count
+                    'estudiantes': total_estudiantes  # Usamos el total general de estudiantes
                 })
 
             trimestres_stats.sort(key=lambda x: x['trimestre'])
