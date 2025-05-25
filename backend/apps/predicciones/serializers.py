@@ -11,5 +11,5 @@ class PrediccionSerializer(serializers.ModelSerializer):
         model = Prediccion
         fields = ['id', 'estudiante', 'materia', 'fecha_prediccion', 'valor_numerico',
                  'nivel_rendimiento', 'promedio_notas', 'porcentaje_asistencia',
-                 'promedio_participaciones', 'estudiante_detail', 'materia_detail']
+                 'promedio_participaciones', 'confianza', 'estudiante_detail', 'materia_detail']
         read_only_fields = ['fecha_prediccion']

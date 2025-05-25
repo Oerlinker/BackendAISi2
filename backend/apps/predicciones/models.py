@@ -29,6 +29,10 @@ class Prediccion(models.Model):
         max_length=10,
         choices=NIVEL_CHOICES
     )
+    confianza = models.IntegerField(
+        default=88,
+        help_text='Nivel de confianza de la predicción (porcentaje)'
+    )
     # Variables predictoras
     promedio_notas = models.DecimalField(
         max_digits=4,
