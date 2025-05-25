@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -46,3 +46,49 @@ class UserProfileView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AdminUserDeleteView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def delete(self, request, user_id):
+        if request.user.role != 'ADMINISTRATIVO':
+            return Response(
+                {"detail": "No tienes permiso para eliminar usuarios."},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        # Buscar y eliminar el usuario
+        user_to_delete = get_object_or_404(User, id=user_id)
+        username = user_to_delete.username
+        user_to_delete.delete()
+
+        return Response(
+            {"detail": f"Usuario {username} eliminado correctamente."},
+            status=status.HTTP_204_NO_CONTENT
+        )
+
+
+class UserListView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        # Solo los administradores y profesores pueden listar usuarios
+        if request.user.role not in ['ADMINISTRATIVO', 'PROFESOR']:
+            return Response(
+                {"detail": "No tienes permiso para listar usuarios."},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        queryset = User.objects.all()
+
+        # Filtro por rol si se especifica
+        rol = request.query_params.get('rol')
+        if rol:
+            queryset = queryset.filter(role=rol)
+
+        # Se podrían añadir más filtros aquí si es necesario
+
+        serializer = UserProfileSerializer(queryset, many=True)
+        return Response(serializer.data)
+
