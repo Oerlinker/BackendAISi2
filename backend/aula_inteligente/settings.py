@@ -160,6 +160,5 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8081",
-    "http://192.168.100.53:8081"
+    "https://aifrontsi2-production.up.railway.app"
 ]
