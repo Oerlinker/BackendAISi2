@@ -10,11 +10,13 @@ from apps.usuarios.models import User
 from apps.materias.models import Materia
 from apps.cursos.models import Curso
 from django.db.models import Avg
+from django.utils import timezone
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from datetime import datetime, timedelta
+from datetime import timedelta
 from decimal import Decimal
 from .recomendaciones import GeneradorRecomendaciones
+from django.db.models import Min, Prefetch
 
 
 class PrediccionViewSet(viewsets.ModelViewSet):
@@ -75,7 +77,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         prediccion_reciente = Prediccion.objects.filter(
             estudiante=estudiante,
             materia=materia,
-            fecha_prediccion__gte=datetime.now() - timedelta(days=7)
+            fecha_prediccion__gte=timezone.now() - timedelta(days=7)
         ).first()
 
         if prediccion_reciente:
@@ -101,34 +103,68 @@ class PrediccionViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def estudiantes_en_riesgo(self, request):
 
+        import time
+
+
+        timeout = 25  # segundos
+        start_time = time.time()
+
         curso_id = request.query_params.get('curso')
         materia_id = request.query_params.get('materia')
 
+
         estudiantes = User.objects.filter(role='ESTUDIANTE')
         if curso_id:
-            estudiantes = estudiantes.filter(curso__id=curso_id)
+            estudiantes = estudiantes.filter(curso__id=curso_id).select_related('curso')
+        else:
+            estudiantes = estudiantes.select_related('curso')
 
         materias = Materia.objects.all()
         if materia_id:
             materias = materias.filter(id=materia_id)
 
+
+        predicciones = Prediccion.objects.all().order_by('-fecha_prediccion')
+        predicciones_por_estudiante = {}
+
+
+        for prediccion in predicciones:
+            key = (prediccion.estudiante_id, prediccion.materia_id)
+            if key not in predicciones_por_estudiante:
+                predicciones_por_estudiante[key] = prediccion
+
         estudiantes_riesgo = []
         umbral_riesgo = 60.0
 
+
+        max_estudiantes = 100
+        estudiantes = estudiantes[:max_estudiantes]
+
         for estudiante in estudiantes:
+
+            if time.time() - start_time > timeout:
+                return Response({
+                    'error': 'La operación está tardando demasiado tiempo. Por favor, restrinja su búsqueda con filtros adicionales.',
+                    'parcial': True,
+                    'total_estudiantes_riesgo': len(estudiantes_riesgo),
+                    'umbral_riesgo': umbral_riesgo,
+                    'estudiantes': estudiantes_riesgo
+                }, status=status.HTTP_200_OK)
+
             materias_riesgo = []
 
             for materia in materias:
 
-                prediccion = Prediccion.objects.filter(
-                    estudiante=estudiante,
-                    materia=materia
-                ).order_by('-fecha_prediccion').first()
+                key = (estudiante.id, materia.id)
+                prediccion = predicciones_por_estudiante.get(key)
 
                 if not prediccion:
                     try:
-                        prediccion = self._calcular_prediccion(estudiante, materia)
-                    except:
+
+                        prediccion = self._calcular_prediccion_rapida(estudiante, materia)
+                    except Exception as e:
+
+                        print(f"Error al calcular predicción: {str(e)}")
                         continue
 
                 if prediccion and prediccion.valor_numerico < umbral_riesgo:
@@ -158,6 +194,20 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             'estudiantes': estudiantes_riesgo
         }, status=status.HTTP_200_OK)
 
+    def _calcular_prediccion_rapida(self, estudiante, materia):
+
+        prediccion_reciente = Prediccion.objects.filter(
+            estudiante=estudiante,
+            materia=materia,
+            fecha_prediccion__gte=timezone.now() - timedelta(days=14)
+        ).first()
+
+        if prediccion_reciente:
+            return prediccion_reciente
+
+
+        return self._calcular_prediccion(estudiante, materia)
+
     @action(detail=True, methods=['get'])
     def recomendaciones(self, request, pk=None):
 
@@ -177,13 +227,13 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         asistencias = Asistencia.objects.filter(
             estudiante=prediccion.estudiante,
             materia=prediccion.materia,
-            fecha__gte=datetime.now() - timedelta(days=90)
+            fecha__gte=timezone.now() - timedelta(days=90)
         )
 
         participaciones = Participacion.objects.filter(
             estudiante=prediccion.estudiante,
             materia=prediccion.materia,
-            fecha__gte=datetime.now() - timedelta(days=90)
+            fecha__gte=timezone.now() - timedelta(days=90)
         )
 
         recomendaciones = GeneradorRecomendaciones.generar_recomendaciones(
@@ -211,7 +261,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             predicciones_preocupantes = Prediccion.objects.filter(
                 estudiante=user,
                 nivel_rendimiento__in=['BAJO', 'MEDIO'],
-                fecha_prediccion__gte=datetime.now() - timedelta(days=14)
+                fecha_prediccion__gte=timezone.now() - timedelta(days=14)
             ).select_related('materia')
 
             for pred in predicciones_preocupantes:
@@ -241,7 +291,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             faltas_recientes = Asistencia.objects.filter(
                 estudiante=user,
                 presente=False,
-                fecha__gte=datetime.now() - timedelta(days=14)
+                fecha__gte=timezone.now() - timedelta(days=14)
             ).select_related('materia')
 
             if faltas_recientes.exists():
@@ -261,7 +311,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                             'id': f"falta_{materia_id}",
                             'tipo': "alerta",
                             'mensaje': f"Tienes {datos['count']} faltas recientes en {datos['nombre']}",
-                            'fecha': datetime.now(),
+                            'fecha': timezone.now(),
                             'accion': {
                                 'texto': "Ver asistencia",
                                 'url': f"/asistencias?materia={materia_id}&estudiante={user.id}"
@@ -279,7 +329,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                     estudiantes_bajo_rendimiento = Prediccion.objects.filter(
                         materia=materia,
                         nivel_rendimiento='BAJO',
-                        fecha_prediccion__gte=datetime.now() - timedelta(days=14)
+                        fecha_prediccion__gte=timezone.now() - timedelta(days=14)
                     ).select_related('estudiante').count()
 
                     if estudiantes_bajo_rendimiento > 0:
@@ -287,14 +337,14 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                             'id': f"riesgo_{materia.id}",
                             'tipo': "informacion",
                             'mensaje': f"Hay {estudiantes_bajo_rendimiento} estudiantes en riesgo de reprobar {materia.nombre}",
-                            'fecha': datetime.now(),
+                            'fecha': timezone.now(),
                             'accion': {
                                 'texto': "Ver detalles",
                                 'url': f"/predicciones/estudiantes_en_riesgo?materia={materia.id}"
                             }
                         })
 
-                    ultima_semana = datetime.now() - timedelta(days=7)
+                    ultima_semana = timezone.now() - timedelta(days=7)
                     asistencias = Asistencia.objects.filter(
                         materia=materia,
                         fecha__gte=ultima_semana
@@ -310,7 +360,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                                 'id': f"asistencia_{materia.id}",
                                 'tipo': "advertencia",
                                 'mensaje': f"La asistencia a {materia.nombre} es baja ({porcentaje:.1f}%)",
-                                'fecha': datetime.now(),
+                                'fecha': timezone.now(),
                                 'accion': {
                                     'texto': "Ver asistencias",
                                     'url': f"/asistencias?materia={materia.id}"
@@ -333,7 +383,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                     tiene_riesgo = Prediccion.objects.filter(
                         estudiante=estudiante,
                         nivel_rendimiento='BAJO',
-                        fecha_prediccion__gte=datetime.now() - timedelta(days=14)
+                        fecha_prediccion__gte=timezone.now() - timedelta(days=14)
                     ).exists()
 
                     if tiene_riesgo:
@@ -347,7 +397,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                             'id': f"curso_{curso.id}",
                             'tipo': "urgente",
                             'mensaje': f"Atención: {estudiantes_riesgo} estudiantes ({porcentaje:.1f}%) en {curso.nombre} están en riesgo académico",
-                            'fecha': datetime.now(),
+                            'fecha': timezone.now(),
                             'accion': {
                                 'texto': "Ver reporte",
                                 'url': f"/predicciones/estudiantes_en_riesgo?curso={curso.id}"
@@ -445,7 +495,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         asistencias_recientes = Asistencia.objects.filter(
             estudiante=estudiante,
             materia=materia,
-            fecha__gte=datetime.now() - timedelta(days=90)
+            fecha__gte=timezone.now() - timedelta(days=90)
         )
 
         total_asistencias = asistencias_recientes.count()
@@ -455,7 +505,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         participaciones_recientes = Participacion.objects.filter(
             estudiante=estudiante,
             materia=materia,
-            fecha__gte=datetime.now() - timedelta(days=90)
+            fecha__gte=timezone.now() - timedelta(days=90)
         )
 
         promedio_participaciones = participaciones_recientes.aggregate(Avg('valor'))['valor__avg'] or 0
@@ -519,7 +569,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         asistencias = Asistencia.objects.filter(
             estudiante=estudiante,
             materia=materia,
-            fecha__gte=ultimo_periodo.fecha_inicio if ultimo_periodo else datetime.now() - timedelta(days=120)
+            fecha__gte=ultimo_periodo.fecha_inicio if ultimo_periodo else timezone.now() - timedelta(days=120)
         )
 
         total_asistencias = asistencias.count()
@@ -532,7 +582,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         participaciones = Participacion.objects.filter(
             estudiante=estudiante,
             materia=materia,
-            fecha__gte=ultimo_periodo.fecha_inicio if ultimo_periodo else datetime.now() - timedelta(days=120)
+            fecha__gte=ultimo_periodo.fecha_inicio if ultimo_periodo else timezone.now() - timedelta(days=120)
         )
 
         promedio_participaciones = 0.0
