@@ -58,7 +58,7 @@ class AdminUserDeleteView(APIView):
                 status=status.HTTP_403_FORBIDDEN
             )
 
-        # Buscar y eliminar el usuario
+
         user_to_delete = get_object_or_404(User, id=user_id)
         username = user_to_delete.username
         user_to_delete.delete()
@@ -73,7 +73,7 @@ class UserListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        # Solo los administradores y profesores pueden listar usuarios
+
         if request.user.role not in ['ADMINISTRATIVO', 'PROFESOR']:
             return Response(
                 {"detail": "No tienes permiso para listar usuarios."},
@@ -82,21 +82,44 @@ class UserListView(APIView):
 
         queryset = User.objects.all()
 
-        # Filtro por rol si se especifica
+
         rol = request.query_params.get('rol')
         if rol:
             queryset = queryset.filter(role=rol)
 
-        # Filtro combinado por materia y curso
+
         materia_id = request.query_params.get('materia')
         curso_id = request.query_params.get('curso')
 
-        # Si se proporcionan tanto materia como curso, filtramos estudiantes específicamente
+
         if materia_id and curso_id and rol == 'ESTUDIANTE':
-            # Obtenemos estudiantes que pertenecen al curso especificado
+
             queryset = queryset.filter(curso__id=curso_id)
-        # Si solo se proporciona el curso, filtramos por curso
+
         elif curso_id and rol == 'ESTUDIANTE':
+            queryset = queryset.filter(curso__id=curso_id)
+
+        serializer = UserProfileSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+class EstudiantesListView(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+
+        if request.user.role not in ['ADMINISTRATIVO', 'PROFESOR']:
+            return Response(
+                {"detail": "No tienes permiso para listar estudiantes."},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        queryset = User.objects.filter(role='ESTUDIANTE')
+
+
+        curso_id = request.query_params.get('curso')
+        if curso_id:
             queryset = queryset.filter(curso__id=curso_id)
 
         serializer = UserProfileSerializer(queryset, many=True)
