@@ -36,7 +36,7 @@ class ParticipacionViewSet(viewsets.ModelViewSet):
         if tipo:
             queryset = queryset.filter(tipo=tipo)
 
-        return queryset
+        return queryset.order_by('-fecha', '-id')
 
     @action(detail=False, methods=['get'])
     def estadisticas_participacion(self, request):
