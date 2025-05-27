@@ -1,3 +1,6 @@
+import os
+import pickle
+import numpy as np
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -11,12 +14,13 @@ from apps.materias.models import Materia
 from apps.cursos.models import Curso
 from django.db.models import Avg
 from django.utils import timezone
-import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from datetime import timedelta
 from decimal import Decimal
 from .recomendaciones import GeneradorRecomendaciones
-from django.db.models import Min, Prefetch
+
+
+MODELS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'models')
 
 
 class PrediccionViewSet(viewsets.ModelViewSet):
@@ -25,14 +29,12 @@ class PrediccionViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-
         user = self.request.user
         queryset = self.queryset
 
         if user.role == 'ESTUDIANTE':
             queryset = queryset.filter(estudiante=user)
         elif user.role == 'PROFESOR':
-
             queryset = queryset.filter(materia__profesor=user)
 
         estudiante_id = self.request.query_params.get('estudiante')
@@ -50,7 +52,6 @@ class PrediccionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['post'])
     def generar_prediccion(self, request):
-
         estudiante_id = request.data.get('estudiante')
         materia_id = request.data.get('materia')
 
@@ -102,16 +103,13 @@ class PrediccionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def estudiantes_en_riesgo(self, request):
-
         import time
-
 
         timeout = 25  # segundos
         start_time = time.time()
 
         curso_id = request.query_params.get('curso')
         materia_id = request.query_params.get('materia')
-
 
         estudiantes = User.objects.filter(role='ESTUDIANTE')
         if curso_id:
@@ -123,10 +121,8 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         if materia_id:
             materias = materias.filter(id=materia_id)
 
-
         predicciones = Prediccion.objects.all().order_by('-fecha_prediccion')
         predicciones_por_estudiante = {}
-
 
         for prediccion in predicciones:
             key = (prediccion.estudiante_id, prediccion.materia_id)
@@ -136,12 +132,10 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         estudiantes_riesgo = []
         umbral_riesgo = 60.0
 
-
         max_estudiantes = 100
         estudiantes = estudiantes[:max_estudiantes]
 
         for estudiante in estudiantes:
-
             if time.time() - start_time > timeout:
                 return Response({
                     'error': 'La operación está tardando demasiado tiempo. Por favor, restrinja su búsqueda con filtros adicionales.',
@@ -154,16 +148,13 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             materias_riesgo = []
 
             for materia in materias:
-
                 key = (estudiante.id, materia.id)
                 prediccion = predicciones_por_estudiante.get(key)
 
                 if not prediccion:
                     try:
-
                         prediccion = self._calcular_prediccion_rapida(estudiante, materia)
                     except Exception as e:
-
                         print(f"Error al calcular predicción: {str(e)}")
                         continue
 
@@ -195,7 +186,6 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         }, status=status.HTTP_200_OK)
 
     def _calcular_prediccion_rapida(self, estudiante, materia):
-
         prediccion_reciente = Prediccion.objects.filter(
             estudiante=estudiante,
             materia=materia,
@@ -205,12 +195,10 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         if prediccion_reciente:
             return prediccion_reciente
 
-
         return self._calcular_prediccion(estudiante, materia)
 
     @action(detail=True, methods=['get'])
     def recomendaciones(self, request, pk=None):
-
         prediccion = self.get_object()
 
         if request.user.role == 'ESTUDIANTE' and request.user.id != prediccion.estudiante.id:
@@ -252,12 +240,10 @@ class PrediccionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def notificaciones(self, request):
-
         user = request.user
         notificaciones = []
 
         if user.role == 'ESTUDIANTE':
-
             predicciones_preocupantes = Prediccion.objects.filter(
                 estudiante=user,
                 nivel_rendimiento__in=['BAJO', 'MEDIO'],
@@ -318,14 +304,11 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                             }
                         })
 
-
         elif user.role == 'PROFESOR':
-
             materias_impartidas = Materia.objects.filter(profesor=user)
 
             if materias_impartidas.exists():
                 for materia in materias_impartidas:
-
                     estudiantes_bajo_rendimiento = Prediccion.objects.filter(
                         materia=materia,
                         nivel_rendimiento='BAJO',
@@ -367,9 +350,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                                 }
                             })
 
-
         elif user.role == 'ADMINISTRATIVO':
-
             cursos = Curso.objects.all()
 
             for curso in cursos:
@@ -414,7 +395,6 @@ class PrediccionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['post'])
     def generar_prediccion_ml(self, request):
-
         estudiante_id = request.data.get('estudiante')
         materia_id = request.data.get('materia')
 
@@ -434,7 +414,6 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             )
 
         try:
-
             prediccion = self._generar_prediccion_ml(estudiante, materia)
             serializer = self.get_serializer(prediccion)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -444,7 +423,126 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+    def _cargar_modelo_pre_entrenado(self, materia_id=None):
+
+        if not os.path.exists(MODELS_DIR):
+            return None
+
+
+        if materia_id:
+            modelo_materia_path = os.path.join(MODELS_DIR, f'modelo_materia_{materia_id}.pkl')
+            if os.path.exists(modelo_materia_path):
+                try:
+                    with open(modelo_materia_path, 'rb') as f:
+                        return pickle.load(f)
+                except Exception:
+                    pass
+
+
+        modelo_general_path = os.path.join(MODELS_DIR, 'modelo_general.pkl')
+        if os.path.exists(modelo_general_path):
+            try:
+                with open(modelo_general_path, 'rb') as f:
+                    return pickle.load(f)
+            except Exception:
+                pass
+
+        return None
+
+    def _extraer_caracteristicas_estudiante(self, estudiante, materia):
+
+
+        ultima_nota = Nota.objects.filter(
+            estudiante=estudiante,
+            materia=materia
+        ).order_by('-periodo__fecha_inicio').first()
+
+        if not ultima_nota:
+            raise ValueError("No hay notas previas para este estudiante en esta materia")
+
+
+        asistencias_recientes = Asistencia.objects.filter(
+            estudiante=estudiante,
+            materia=materia,
+            fecha__gte=timezone.now() - timedelta(days=90)
+        )
+
+        total_asistencias = asistencias_recientes.count()
+        asistencias_presentes = asistencias_recientes.filter(presente=True).count()
+        porcentaje_asistencia = (asistencias_presentes / total_asistencias) * 100 if total_asistencias > 0 else 0
+
+
+        participaciones_recientes = Participacion.objects.filter(
+            estudiante=estudiante,
+            materia=materia,
+            fecha__gte=timezone.now() - timedelta(days=90)
+        )
+
+        promedio_participaciones = participaciones_recientes.aggregate(Avg('valor'))['valor__avg'] or 0
+
+
+        features = [
+            float(ultima_nota.ser_puntaje),
+            float(ultima_nota.saber_puntaje),
+            float(ultima_nota.hacer_puntaje),
+            float(ultima_nota.decidir_puntaje),
+            float(ultima_nota.autoevaluacion_ser),
+            float(ultima_nota.autoevaluacion_decidir),
+            porcentaje_asistencia,
+            promedio_participaciones
+        ]
+
+        return features, porcentaje_asistencia, promedio_participaciones, ultima_nota
+
     def _generar_prediccion_ml(self, estudiante, materia):
+
+        model = self._cargar_modelo_pre_entrenado(materia.id)
+
+
+        if model is None:
+            return self._generar_prediccion_ml_antiguo(estudiante, materia)
+
+        try:
+
+            features_estudiante, porcentaje_asistencia, promedio_participaciones, ultima_nota = self._extraer_caracteristicas_estudiante(estudiante, materia)
+
+
+            valor_predicho = model.predict([features_estudiante])[0]
+
+
+            valor_predicho = max(0, min(100, valor_predicho))
+
+
+            nivel_rendimiento = 'BAJO'
+            if valor_predicho >= 80:
+                nivel_rendimiento = 'ALTO'
+            elif valor_predicho >= 60:
+                nivel_rendimiento = 'MEDIO'
+
+
+            valor_predicho_decimal = Decimal(str(round(valor_predicho, 2)))
+            porcentaje_asistencia_decimal = Decimal(str(round(porcentaje_asistencia, 2)))
+            promedio_participaciones_decimal = Decimal(str(round(promedio_participaciones, 2)))
+            promedio_notas_decimal = Decimal(str(round(float(ultima_nota.nota_total), 2)))
+
+
+            prediccion = Prediccion.objects.create(
+                estudiante=estudiante,
+                materia=materia,
+                valor_numerico=valor_predicho_decimal,
+                nivel_rendimiento=nivel_rendimiento,
+                promedio_notas=promedio_notas_decimal,
+                porcentaje_asistencia=porcentaje_asistencia_decimal,
+                promedio_participaciones=promedio_participaciones_decimal,
+                confianza=90
+            )
+
+            return prediccion
+        except Exception:
+
+            return self._generar_prediccion_ml_antiguo(estudiante, materia)
+
+    def _generar_prediccion_ml_antiguo(self, estudiante, materia):
 
         features = []
         labels = []
@@ -478,6 +576,8 @@ class PrediccionViewSet(viewsets.ModelViewSet):
                 float(nota.saber_puntaje),
                 float(nota.hacer_puntaje),
                 float(nota.decidir_puntaje),
+                float(nota.autoevaluacion_ser),
+                float(nota.autoevaluacion_decidir),
                 porcentaje_asistencia,
                 promedio_participaciones
             ])
@@ -490,46 +590,15 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         model = RandomForestRegressor(n_estimators=100, random_state=42)
         model.fit(X, y)
 
-        ultimo_periodo = Periodo.objects.all().order_by('-fecha_inicio').first()
 
-        asistencias_recientes = Asistencia.objects.filter(
-            estudiante=estudiante,
-            materia=materia,
-            fecha__gte=timezone.now() - timedelta(days=90)
-        )
+        features_estudiante, porcentaje_asistencia, promedio_participaciones, ultima_nota = self._extraer_caracteristicas_estudiante(estudiante, materia)
 
-        total_asistencias = asistencias_recientes.count()
-        asistencias_presentes = asistencias_recientes.filter(presente=True).count()
-        porcentaje_asistencia = (asistencias_presentes / total_asistencias) * 100 if total_asistencias > 0 else 0
-
-        participaciones_recientes = Participacion.objects.filter(
-            estudiante=estudiante,
-            materia=materia,
-            fecha__gte=timezone.now() - timedelta(days=90)
-        )
-
-        promedio_participaciones = participaciones_recientes.aggregate(Avg('valor'))['valor__avg'] or 0
-
-        ultima_nota = Nota.objects.filter(
-            estudiante=estudiante,
-            materia=materia
-        ).order_by('-periodo__fecha_inicio').first()
-
-        if not ultima_nota:
-            raise ValueError("No hay notas previas para este estudiante en esta materia")
-
-        features_estudiante = [
-            float(ultima_nota.ser_puntaje),
-            float(ultima_nota.saber_puntaje),
-            float(ultima_nota.hacer_puntaje),
-            float(ultima_nota.decidir_puntaje),
-            porcentaje_asistencia,
-            promedio_participaciones
-        ]
 
         valor_predicho = model.predict([features_estudiante])[0]
 
+
         valor_predicho = max(0, min(100, valor_predicho))
+
 
         nivel_rendimiento = 'BAJO'
         if valor_predicho >= 80:
@@ -537,10 +606,12 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         elif valor_predicho >= 60:
             nivel_rendimiento = 'MEDIO'
 
+
         valor_predicho_decimal = Decimal(str(round(valor_predicho, 2)))
         porcentaje_asistencia_decimal = Decimal(str(round(porcentaje_asistencia, 2)))
         promedio_participaciones_decimal = Decimal(str(round(promedio_participaciones, 2)))
         promedio_total_decimal = Decimal(str(round(float(ultima_nota.nota_total), 2)))
+
 
         prediccion = Prediccion.objects.create(
             estudiante=estudiante,
@@ -549,12 +620,57 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             nivel_rendimiento=nivel_rendimiento,
             promedio_notas=promedio_total_decimal,
             porcentaje_asistencia=porcentaje_asistencia_decimal,
-            promedio_participaciones=promedio_participaciones_decimal
+            promedio_participaciones=promedio_participaciones_decimal,
+            confianza=80
         )
 
         return prediccion
 
     def _calcular_prediccion(self, estudiante, materia):
+
+        model = self._cargar_modelo_pre_entrenado(materia.id)
+
+        if model is not None:
+            try:
+
+                features_estudiante, porcentaje_asistencia, promedio_participaciones, ultima_nota = self._extraer_caracteristicas_estudiante(estudiante, materia)
+
+
+                valor_predicho = model.predict([features_estudiante])[0]
+
+
+                valor_predicho = max(0, min(100, valor_predicho))
+
+
+                nivel_rendimiento = 'BAJO'
+                if valor_predicho >= 80:
+                    nivel_rendimiento = 'ALTO'
+                elif valor_predicho >= 60:
+                    nivel_rendimiento = 'MEDIO'
+
+
+                valor_predicho_decimal = Decimal(str(round(valor_predicho, 2)))
+                porcentaje_asistencia_decimal = Decimal(str(round(porcentaje_asistencia, 2)))
+                promedio_participaciones_decimal = Decimal(str(round(promedio_participaciones, 2)))
+                promedio_notas_decimal = Decimal(str(round(float(ultima_nota.nota_total), 2)))
+
+
+                prediccion = Prediccion.objects.create(
+                    estudiante=estudiante,
+                    materia=materia,
+                    valor_numerico=valor_predicho_decimal,
+                    nivel_rendimiento=nivel_rendimiento,
+                    promedio_notas=promedio_notas_decimal,
+                    porcentaje_asistencia=porcentaje_asistencia_decimal,
+                    promedio_participaciones=promedio_participaciones_decimal,
+                    confianza=90
+                )
+
+                return prediccion
+            except Exception:
+
+                pass
+
 
         notas = Nota.objects.filter(
             estudiante=estudiante,
@@ -611,9 +727,7 @@ class PrediccionViewSet(viewsets.ModelViewSet):
         ])
 
         factor_asistencia = porcentaje_asistencia * 0.25
-
         factor_participacion = min(10, promedio_participaciones) / 10 * 15
-
         factor_notas = promedio_total * 0.6
 
         valor_predicho = factor_asistencia + factor_participacion + factor_notas
@@ -624,7 +738,6 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             penultima_nota = float(notas_ordenadas[-2].nota_total if len(notas_ordenadas) > 1 else ultima_nota)
 
             tendencia = ultima_nota - penultima_nota
-
             valor_predicho += min(5, max(-5, tendencia))
 
         valor_predicho = max(0, min(100, valor_predicho))
@@ -647,7 +760,8 @@ class PrediccionViewSet(viewsets.ModelViewSet):
             nivel_rendimiento=nivel_rendimiento,
             promedio_notas=promedio_total_decimal,
             porcentaje_asistencia=porcentaje_asistencia_decimal,
-            promedio_participaciones=promedio_participaciones_decimal
+            promedio_participaciones=promedio_participaciones_decimal,
+            confianza=85
         )
 
         return prediccion
