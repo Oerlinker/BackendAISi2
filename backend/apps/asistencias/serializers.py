@@ -11,3 +11,14 @@ class AsistenciaSerializer(serializers.ModelSerializer):
         model = Asistencia
         fields = ['id', 'estudiante', 'materia', 'fecha', 'presente', 'justificacion',
                  'estudiante_detail', 'materia_detail']
+
+class AsistenciaListSerializer(serializers.ModelSerializer):
+
+    estudiante_nombre = serializers.CharField(source='estudiante.get_full_name', read_only=True)
+    materia_nombre = serializers.CharField(source='materia.nombre', read_only=True)
+
+    class Meta:
+        model = Asistencia
+        fields = ['id', 'estudiante', 'materia', 'fecha', 'presente', 'justificacion',
+                 'estudiante_nombre', 'materia_nombre']
+

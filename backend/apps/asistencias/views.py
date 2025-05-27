@@ -1,32 +1,54 @@
 from rest_framework import viewsets, permissions, status
 from .models import Asistencia
-from .serializers import AsistenciaSerializer
+from .serializers import AsistenciaSerializer, AsistenciaListSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.db import IntegrityError, transaction
+from rest_framework.pagination import PageNumberPagination
 
+
+class AsistenciaPagination(PageNumberPagination):
+    page_size = 100
+    page_size_query_param = 'page_size'
+    max_page_size = 500
 
 
 class AsistenciaViewSet(viewsets.ModelViewSet):
     serializer_class = AsistenciaSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = AsistenciaPagination
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return AsistenciaListSerializer
+        return AsistenciaSerializer
 
     def get_queryset(self):
-        queryset = Asistencia.objects.all().select_related('estudiante', 'materia')
+        queryset = Asistencia.objects.all()
         estudiante_id = self.request.query_params.get('estudiante')
         materia_id = self.request.query_params.get('materia')
+        fecha = self.request.query_params.get('fecha')
         fecha_inicio = self.request.query_params.get('fecha_inicio')
         fecha_fin = self.request.query_params.get('fecha_fin')
+        curso_id = self.request.query_params.get('curso')
+
 
         if estudiante_id:
             queryset = queryset.filter(estudiante__id=estudiante_id)
         if materia_id:
             queryset = queryset.filter(materia__id=materia_id)
+        if fecha:
+            queryset = queryset.filter(fecha=fecha)
         if fecha_inicio:
             queryset = queryset.filter(fecha__gte=fecha_inicio)
         if fecha_fin:
             queryset = queryset.filter(fecha__lte=fecha_fin)
+        if curso_id:
+            queryset = queryset.filter(estudiante__curso__id=curso_id)
 
+
+        if self.action in ['list', 'retrieve']:
+            queryset = queryset.select_related('estudiante', 'materia')
 
         return queryset.order_by('-fecha', 'estudiante__last_name')
 
