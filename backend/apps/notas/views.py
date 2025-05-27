@@ -32,6 +32,7 @@ class NotaViewSet(viewsets.ModelViewSet):
 
             queryset = queryset.filter(materia__profesor=user)
 
+
         estudiante_id = self.request.query_params.get('estudiante')
         materia_id = self.request.query_params.get('materia')
         periodo_id = self.request.query_params.get('periodo')
@@ -182,6 +183,7 @@ class NotaViewSet(viewsets.ModelViewSet):
         if not materia_id:
             return Response({"error": "Se requiere el ID de la materia"}, status=status.HTTP_400_BAD_REQUEST)
 
+        # Verificamos permisos solo para profesores, no para administrativos
         if request.user.role == 'PROFESOR':
             materia = get_object_or_404(Materia, id=materia_id)
             if materia.profesor and materia.profesor.id != request.user.id:
@@ -189,6 +191,7 @@ class NotaViewSet(viewsets.ModelViewSet):
                     {"error": "No tienes permiso para ver las estadísticas de esta materia"},
                     status=status.HTTP_403_FORBIDDEN
                 )
+        # Los administrativos pueden acceder a todas las materias sin restricción
 
         notas = Nota.objects.filter(materia__id=materia_id)
 
