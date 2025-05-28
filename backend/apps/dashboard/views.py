@@ -213,6 +213,14 @@ class DashboardEstudianteView(APIView):
         predicciones = Prediccion.objects.filter(estudiante=estudiante).select_related('materia')
         predicciones_list = []
         for pred in predicciones:
+
+            if pred.valor_numerico >= 51:
+
+                probabilidad_aprobar = min(100, 70 + (pred.valor_numerico - 51) * 1.5)
+            else:
+
+                probabilidad_aprobar = max(0, (pred.valor_numerico / 51) * 70)
+
             predicciones_list.append({
                 'id': pred.id,
                 'materia_id': pred.materia.id,
@@ -220,6 +228,7 @@ class DashboardEstudianteView(APIView):
                 'fecha_prediccion': pred.fecha_prediccion,
                 'valor_numerico': pred.valor_numerico,
                 'nivel_rendimiento': pred.nivel_rendimiento,
+                'probabilidad_aprobar': round(probabilidad_aprobar, 1),
                 'variables': {
                     'promedio_notas': pred.promedio_notas,
                     'porcentaje_asistencia': pred.porcentaje_asistencia,
