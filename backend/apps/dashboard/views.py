@@ -247,11 +247,22 @@ class ComparativoRendimientoView(APIView):
                 status=status.HTTP_403_FORBIDDEN
             )
 
-        predicciones = Prediccion.objects.all().select_related('estudiante', 'materia')
+
+        estudiante_id = request.query_params.get('estudiante')
+        materia_id = request.query_params.get('materia')
+
+
+        predicciones_query = Prediccion.objects.all().select_related('estudiante', 'materia')
+
+
+        if estudiante_id:
+            predicciones_query = predicciones_query.filter(estudiante_id=estudiante_id)
+        if materia_id:
+            predicciones_query = predicciones_query.filter(materia_id=materia_id)
 
         comparaciones = []
 
-        for pred in predicciones:
+        for pred in predicciones_query:
 
             nota_real = Nota.objects.filter(
                 estudiante=pred.estudiante,
