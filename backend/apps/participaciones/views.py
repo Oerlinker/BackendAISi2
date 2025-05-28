@@ -24,6 +24,8 @@ class ParticipacionViewSet(viewsets.ModelViewSet):
         fecha_inicio = self.request.query_params.get('fecha_inicio')
         fecha_fin = self.request.query_params.get('fecha_fin')
         tipo = self.request.query_params.get('tipo')
+        curso_id = self.request.query_params.get('curso')
+        fecha = self.request.query_params.get('fecha')
 
         if estudiante_id:
             queryset = queryset.filter(estudiante__id=estudiante_id)
@@ -33,8 +35,12 @@ class ParticipacionViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(fecha__gte=fecha_inicio)
         if fecha_fin:
             queryset = queryset.filter(fecha__lte=fecha_fin)
+        if fecha:
+            queryset = queryset.filter(fecha=fecha)
         if tipo:
             queryset = queryset.filter(tipo=tipo)
+        if curso_id:
+            queryset = queryset.filter(estudiante__curso__id=curso_id)
 
         return queryset.order_by('-fecha', '-id')
 
