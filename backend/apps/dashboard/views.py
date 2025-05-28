@@ -161,7 +161,7 @@ class DashboardEstudianteView(APIView):
                     'saber': nota.saber_puntaje,
                     'hacer': nota.hacer_puntaje,
                     'decidir': nota.decidir_puntaje,
-                    'autoevaluacion': nota.autoevaluacion_puntaje
+                    'autoevaluacion': nota.autoevaluacion_ser + nota.autoevaluacion_decidir
                 }
             }
 
