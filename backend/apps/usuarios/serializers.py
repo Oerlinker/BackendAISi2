@@ -60,7 +60,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'role', 'curso', 'curso_detail']
-        read_only_fields = ['id', 'username', 'email']
+        read_only_fields = ['id', 'username', 'email', 'role', 'curso', 'curso_detail']
 
 
 class AdminUserUpdateSerializer(serializers.ModelSerializer):
@@ -73,7 +73,7 @@ class AdminUserUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'role', 'curso', 'curso_detail']
-        read_only_fields = ['id']  # Solo el ID no se puede modificar
+        read_only_fields = ['id']
         
     def validate(self, attrs):
         # Si se está asignando un curso, verificar que el usuario sea estudiante
