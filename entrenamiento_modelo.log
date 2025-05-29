@@ -1,0 +1,1815 @@
+2025-05-27 20:58:48,859 - __main__ - INFO - === INICIO DEL PROCESO DE ENTRENAMIENTO ===
+2025-05-27 20:58:48,859 - __main__ - INFO - Iniciando entrenamiento del modelo general...
+2025-05-27 20:58:51,298 - __main__ - INFO - Total de notas encontradas: 8101
+2025-05-27 20:59:24,570 - __main__ - INFO - Progreso: 20/8101 notas procesadas (0.2%)
+2025-05-27 20:59:56,037 - __main__ - INFO - Progreso: 40/8101 notas procesadas (0.5%)
+2025-05-27 21:00:27,482 - __main__ - INFO - Progreso: 60/8101 notas procesadas (0.7%)
+2025-05-27 21:00:58,903 - __main__ - INFO - Progreso: 80/8101 notas procesadas (1.0%)
+2025-05-27 21:01:30,334 - __main__ - INFO - Progreso: 100/8101 notas procesadas (1.2%)
+2025-05-27 21:02:01,815 - __main__ - INFO - Progreso: 120/8101 notas procesadas (1.5%)
+2025-05-27 21:02:33,342 - __main__ - INFO - Progreso: 140/8101 notas procesadas (1.7%)
+2025-05-27 21:03:04,783 - __main__ - INFO - Progreso: 160/8101 notas procesadas (2.0%)
+2025-05-27 21:03:36,779 - __main__ - INFO - Progreso: 180/8101 notas procesadas (2.2%)
+2025-05-27 21:04:09,441 - __main__ - INFO - Progreso: 200/8101 notas procesadas (2.5%)
+2025-05-27 21:04:42,112 - __main__ - INFO - Progreso: 220/8101 notas procesadas (2.7%)
+2025-05-27 21:05:14,958 - __main__ - INFO - Progreso: 240/8101 notas procesadas (3.0%)
+2025-05-27 21:05:47,660 - __main__ - INFO - Progreso: 260/8101 notas procesadas (3.2%)
+2025-05-27 21:06:20,379 - __main__ - INFO - Progreso: 280/8101 notas procesadas (3.5%)
+2025-05-27 21:06:53,067 - __main__ - INFO - Progreso: 300/8101 notas procesadas (3.7%)
+2025-05-27 21:07:25,761 - __main__ - INFO - Progreso: 320/8101 notas procesadas (4.0%)
+2025-05-27 21:07:58,976 - __main__ - INFO - Progreso: 340/8101 notas procesadas (4.2%)
+2025-05-27 21:08:33,990 - __main__ - INFO - Progreso: 360/8101 notas procesadas (4.4%)
+2025-05-27 21:09:08,972 - __main__ - INFO - Progreso: 380/8101 notas procesadas (4.7%)
+2025-05-27 21:09:42,569 - __main__ - INFO - Progreso: 400/8101 notas procesadas (4.9%)
+2025-05-27 21:10:14,455 - __main__ - INFO - Progreso: 420/8101 notas procesadas (5.2%)
+2025-05-27 21:10:47,705 - __main__ - INFO - Progreso: 440/8101 notas procesadas (5.4%)
+2025-05-27 21:11:19,345 - __main__ - INFO - Progreso: 460/8101 notas procesadas (5.7%)
+2025-05-27 21:11:50,923 - __main__ - INFO - Progreso: 480/8101 notas procesadas (5.9%)
+2025-05-27 21:12:22,621 - __main__ - INFO - Progreso: 500/8101 notas procesadas (6.2%)
+2025-05-27 21:12:54,136 - __main__ - INFO - Progreso: 520/8101 notas procesadas (6.4%)
+2025-05-27 21:13:25,624 - __main__ - INFO - Progreso: 540/8101 notas procesadas (6.7%)
+2025-05-27 21:13:57,125 - __main__ - INFO - Progreso: 560/8101 notas procesadas (6.9%)
+2025-05-27 21:14:28,613 - __main__ - INFO - Progreso: 580/8101 notas procesadas (7.2%)
+2025-05-27 21:15:01,995 - __main__ - INFO - Progreso: 600/8101 notas procesadas (7.4%)
+2025-05-27 21:15:34,970 - __main__ - INFO - Progreso: 620/8101 notas procesadas (7.7%)
+2025-05-27 21:16:06,470 - __main__ - INFO - Progreso: 640/8101 notas procesadas (7.9%)
+2025-05-27 21:16:37,959 - __main__ - INFO - Progreso: 660/8101 notas procesadas (8.1%)
+2025-05-27 21:17:09,585 - __main__ - INFO - Progreso: 680/8101 notas procesadas (8.4%)
+2025-05-27 21:17:41,060 - __main__ - INFO - Progreso: 700/8101 notas procesadas (8.6%)
+2025-05-27 21:18:12,564 - __main__ - INFO - Progreso: 720/8101 notas procesadas (8.9%)
+2025-05-27 21:18:44,032 - __main__ - INFO - Progreso: 740/8101 notas procesadas (9.1%)
+2025-05-27 21:19:15,551 - __main__ - INFO - Progreso: 760/8101 notas procesadas (9.4%)
+2025-05-27 21:19:47,124 - __main__ - INFO - Progreso: 780/8101 notas procesadas (9.6%)
+2025-05-27 21:20:18,665 - __main__ - INFO - Progreso: 800/8101 notas procesadas (9.9%)
+2025-05-27 21:20:50,238 - __main__ - INFO - Progreso: 820/8101 notas procesadas (10.1%)
+2025-05-27 21:21:21,775 - __main__ - INFO - Progreso: 840/8101 notas procesadas (10.4%)
+2025-05-27 21:21:53,306 - __main__ - INFO - Progreso: 860/8101 notas procesadas (10.6%)
+2025-05-27 21:22:24,778 - __main__ - INFO - Progreso: 880/8101 notas procesadas (10.9%)
+2025-05-27 21:22:56,274 - __main__ - INFO - Progreso: 900/8101 notas procesadas (11.1%)
+2025-05-27 21:23:27,755 - __main__ - INFO - Progreso: 920/8101 notas procesadas (11.4%)
+2025-05-27 21:23:59,251 - __main__ - INFO - Progreso: 940/8101 notas procesadas (11.6%)
+2025-05-27 21:24:30,738 - __main__ - INFO - Progreso: 960/8101 notas procesadas (11.9%)
+2025-05-27 21:25:02,217 - __main__ - INFO - Progreso: 980/8101 notas procesadas (12.1%)
+2025-05-27 21:25:33,698 - __main__ - INFO - Progreso: 1000/8101 notas procesadas (12.3%)
+2025-05-27 21:26:05,507 - __main__ - INFO - Progreso: 1020/8101 notas procesadas (12.6%)
+2025-05-27 21:26:37,041 - __main__ - INFO - Progreso: 1040/8101 notas procesadas (12.8%)
+2025-05-27 21:27:08,861 - __main__ - INFO - Progreso: 1060/8101 notas procesadas (13.1%)
+2025-05-27 21:27:40,405 - __main__ - INFO - Progreso: 1080/8101 notas procesadas (13.3%)
+2025-05-27 21:28:11,967 - __main__ - INFO - Progreso: 1100/8101 notas procesadas (13.6%)
+2025-05-27 21:28:43,543 - __main__ - INFO - Progreso: 1120/8101 notas procesadas (13.8%)
+2025-05-27 21:29:15,104 - __main__ - INFO - Progreso: 1140/8101 notas procesadas (14.1%)
+2025-05-27 21:29:46,649 - __main__ - INFO - Progreso: 1160/8101 notas procesadas (14.3%)
+2025-05-27 21:30:18,524 - __main__ - INFO - Progreso: 1180/8101 notas procesadas (14.6%)
+2025-05-27 21:30:53,089 - __main__ - INFO - Progreso: 1200/8101 notas procesadas (14.8%)
+2025-05-27 21:31:28,068 - __main__ - INFO - Progreso: 1220/8101 notas procesadas (15.1%)
+2025-05-27 21:32:03,137 - __main__ - INFO - Progreso: 1240/8101 notas procesadas (15.3%)
+2025-05-27 21:32:38,138 - __main__ - INFO - Progreso: 1260/8101 notas procesadas (15.6%)
+2025-05-27 21:33:13,201 - __main__ - INFO - Progreso: 1280/8101 notas procesadas (15.8%)
+2025-05-27 21:33:45,742 - __main__ - INFO - Progreso: 1300/8101 notas procesadas (16.0%)
+2025-05-27 21:34:17,248 - __main__ - INFO - Progreso: 1320/8101 notas procesadas (16.3%)
+2025-05-27 21:34:49,132 - __main__ - INFO - Progreso: 1340/8101 notas procesadas (16.5%)
+2025-05-27 21:35:20,758 - __main__ - INFO - Progreso: 1360/8101 notas procesadas (16.8%)
+2025-05-27 21:35:52,389 - __main__ - INFO - Progreso: 1380/8101 notas procesadas (17.0%)
+2025-05-27 21:36:24,211 - __main__ - INFO - Progreso: 1400/8101 notas procesadas (17.3%)
+2025-05-27 21:36:55,816 - __main__ - INFO - Progreso: 1420/8101 notas procesadas (17.5%)
+2025-05-27 21:37:27,661 - __main__ - INFO - Progreso: 1440/8101 notas procesadas (17.8%)
+2025-05-27 21:37:59,285 - __main__ - INFO - Progreso: 1460/8101 notas procesadas (18.0%)
+2025-05-27 21:38:30,919 - __main__ - INFO - Progreso: 1480/8101 notas procesadas (18.3%)
+2025-05-27 21:39:02,479 - __main__ - INFO - Progreso: 1500/8101 notas procesadas (18.5%)
+2025-05-27 21:39:34,071 - __main__ - INFO - Progreso: 1520/8101 notas procesadas (18.8%)
+2025-05-27 21:40:05,680 - __main__ - INFO - Progreso: 1540/8101 notas procesadas (19.0%)
+2025-05-27 21:40:37,315 - __main__ - INFO - Progreso: 1560/8101 notas procesadas (19.3%)
+2025-05-27 21:41:08,854 - __main__ - INFO - Progreso: 1580/8101 notas procesadas (19.5%)
+2025-05-27 21:41:40,346 - __main__ - INFO - Progreso: 1600/8101 notas procesadas (19.8%)
+2025-05-27 21:42:11,857 - __main__ - INFO - Progreso: 1620/8101 notas procesadas (20.0%)
+2025-05-27 21:42:43,801 - __main__ - INFO - Progreso: 1640/8101 notas procesadas (20.2%)
+2025-05-27 21:43:15,346 - __main__ - INFO - Progreso: 1660/8101 notas procesadas (20.5%)
+2025-05-27 21:43:46,902 - __main__ - INFO - Progreso: 1680/8101 notas procesadas (20.7%)
+2025-05-27 21:44:18,419 - __main__ - INFO - Progreso: 1700/8101 notas procesadas (21.0%)
+2025-05-27 21:44:49,993 - __main__ - INFO - Progreso: 1720/8101 notas procesadas (21.2%)
+2025-05-27 21:45:21,508 - __main__ - INFO - Progreso: 1740/8101 notas procesadas (21.5%)
+2025-05-27 21:45:53,559 - __main__ - INFO - Progreso: 1760/8101 notas procesadas (21.7%)
+2025-05-27 21:46:25,159 - __main__ - INFO - Progreso: 1780/8101 notas procesadas (22.0%)
+2025-05-27 21:46:56,674 - __main__ - INFO - Progreso: 1800/8101 notas procesadas (22.2%)
+2025-05-27 21:47:28,238 - __main__ - INFO - Progreso: 1820/8101 notas procesadas (22.5%)
+2025-05-27 21:48:03,033 - __main__ - INFO - Progreso: 1840/8101 notas procesadas (22.7%)
+2025-05-27 21:48:34,544 - __main__ - INFO - Progreso: 1860/8101 notas procesadas (23.0%)
+2025-05-27 21:49:06,175 - __main__ - INFO - Progreso: 1880/8101 notas procesadas (23.2%)
+2025-05-27 21:49:37,814 - __main__ - INFO - Progreso: 1900/8101 notas procesadas (23.5%)
+2025-05-27 21:50:11,011 - __main__ - INFO - Progreso: 1920/8101 notas procesadas (23.7%)
+2025-05-27 21:50:46,005 - __main__ - INFO - Progreso: 1940/8101 notas procesadas (23.9%)
+2025-05-27 21:51:20,919 - __main__ - INFO - Progreso: 1960/8101 notas procesadas (24.2%)
+2025-05-27 21:51:55,785 - __main__ - INFO - Progreso: 1980/8101 notas procesadas (24.4%)
+2025-05-27 21:52:31,251 - __main__ - INFO - Progreso: 2000/8101 notas procesadas (24.7%)
+2025-05-27 21:53:07,502 - __main__ - INFO - Progreso: 2020/8101 notas procesadas (24.9%)
+2025-05-27 21:53:40,886 - __main__ - INFO - Progreso: 2040/8101 notas procesadas (25.2%)
+2025-05-27 21:54:12,467 - __main__ - INFO - Progreso: 2060/8101 notas procesadas (25.4%)
+2025-05-27 21:54:44,209 - __main__ - INFO - Progreso: 2080/8101 notas procesadas (25.7%)
+2025-05-27 21:55:15,986 - __main__ - INFO - Progreso: 2100/8101 notas procesadas (25.9%)
+2025-05-27 21:55:47,577 - __main__ - INFO - Progreso: 2120/8101 notas procesadas (26.2%)
+2025-05-27 21:56:19,200 - __main__ - INFO - Progreso: 2140/8101 notas procesadas (26.4%)
+2025-05-27 21:56:50,770 - __main__ - INFO - Progreso: 2160/8101 notas procesadas (26.7%)
+2025-05-27 21:57:22,373 - __main__ - INFO - Progreso: 2180/8101 notas procesadas (26.9%)
+2025-05-27 21:57:53,947 - __main__ - INFO - Progreso: 2200/8101 notas procesadas (27.2%)
+2025-05-27 21:58:25,564 - __main__ - INFO - Progreso: 2220/8101 notas procesadas (27.4%)
+2025-05-27 21:58:57,284 - __main__ - INFO - Progreso: 2240/8101 notas procesadas (27.7%)
+2025-05-27 21:59:28,954 - __main__ - INFO - Progreso: 2260/8101 notas procesadas (27.9%)
+2025-05-27 22:00:00,558 - __main__ - INFO - Progreso: 2280/8101 notas procesadas (28.1%)
+2025-05-27 22:00:32,109 - __main__ - INFO - Progreso: 2300/8101 notas procesadas (28.4%)
+2025-05-27 22:01:03,659 - __main__ - INFO - Progreso: 2320/8101 notas procesadas (28.6%)
+2025-05-27 22:01:35,304 - __main__ - INFO - Progreso: 2340/8101 notas procesadas (28.9%)
+2025-05-27 22:02:07,246 - __main__ - INFO - Progreso: 2360/8101 notas procesadas (29.1%)
+2025-05-27 22:02:39,841 - __main__ - INFO - Progreso: 2380/8101 notas procesadas (29.4%)
+2025-05-27 22:03:12,470 - __main__ - INFO - Progreso: 2400/8101 notas procesadas (29.6%)
+2025-05-27 22:03:46,436 - __main__ - INFO - Progreso: 2420/8101 notas procesadas (29.9%)
+2025-05-27 22:04:21,390 - __main__ - INFO - Progreso: 2440/8101 notas procesadas (30.1%)
+2025-05-27 22:04:56,275 - __main__ - INFO - Progreso: 2460/8101 notas procesadas (30.4%)
+2025-05-27 22:05:28,940 - __main__ - INFO - Progreso: 2480/8101 notas procesadas (30.6%)
+2025-05-27 22:06:01,585 - __main__ - INFO - Progreso: 2500/8101 notas procesadas (30.9%)
+2025-05-27 22:06:34,216 - __main__ - INFO - Progreso: 2520/8101 notas procesadas (31.1%)
+2025-05-27 22:07:06,939 - __main__ - INFO - Progreso: 2540/8101 notas procesadas (31.4%)
+2025-05-27 22:07:39,522 - __main__ - INFO - Progreso: 2560/8101 notas procesadas (31.6%)
+2025-05-27 22:08:11,664 - __main__ - INFO - Progreso: 2580/8101 notas procesadas (31.8%)
+2025-05-27 22:08:43,229 - __main__ - INFO - Progreso: 2600/8101 notas procesadas (32.1%)
+2025-05-27 22:09:14,968 - __main__ - INFO - Progreso: 2620/8101 notas procesadas (32.3%)
+2025-05-27 22:09:46,518 - __main__ - INFO - Progreso: 2640/8101 notas procesadas (32.6%)
+2025-05-27 22:10:18,127 - __main__ - INFO - Progreso: 2660/8101 notas procesadas (32.8%)
+2025-05-27 22:10:49,800 - __main__ - INFO - Progreso: 2680/8101 notas procesadas (33.1%)
+2025-05-27 22:11:21,398 - __main__ - INFO - Progreso: 2700/8101 notas procesadas (33.3%)
+2025-05-27 22:11:53,000 - __main__ - INFO - Progreso: 2720/8101 notas procesadas (33.6%)
+2025-05-27 22:12:24,506 - __main__ - INFO - Progreso: 2740/8101 notas procesadas (33.8%)
+2025-05-27 22:12:56,114 - __main__ - INFO - Progreso: 2760/8101 notas procesadas (34.1%)
+2025-05-27 22:13:27,774 - __main__ - INFO - Progreso: 2780/8101 notas procesadas (34.3%)
+2025-05-27 22:13:59,577 - __main__ - INFO - Progreso: 2800/8101 notas procesadas (34.6%)
+2025-05-27 22:14:31,182 - __main__ - INFO - Progreso: 2820/8101 notas procesadas (34.8%)
+2025-05-27 22:15:02,833 - __main__ - INFO - Progreso: 2840/8101 notas procesadas (35.1%)
+2025-05-27 22:15:36,542 - __main__ - INFO - Progreso: 2860/8101 notas procesadas (35.3%)
+2025-05-27 22:16:08,253 - __main__ - INFO - Progreso: 2880/8101 notas procesadas (35.6%)
+2025-05-27 22:16:39,790 - __main__ - INFO - Progreso: 2900/8101 notas procesadas (35.8%)
+2025-05-27 22:17:11,858 - __main__ - INFO - Progreso: 2920/8101 notas procesadas (36.0%)
+2025-05-27 22:17:43,940 - __main__ - INFO - Progreso: 2940/8101 notas procesadas (36.3%)
+2025-05-27 22:18:15,748 - __main__ - INFO - Progreso: 2960/8101 notas procesadas (36.5%)
+2025-05-27 22:18:49,336 - __main__ - INFO - Progreso: 2980/8101 notas procesadas (36.8%)
+2025-05-27 22:19:24,354 - __main__ - INFO - Progreso: 3000/8101 notas procesadas (37.0%)
+2025-05-27 22:19:59,595 - __main__ - INFO - Progreso: 3020/8101 notas procesadas (37.3%)
+2025-05-27 22:20:34,351 - __main__ - INFO - Progreso: 3040/8101 notas procesadas (37.5%)
+2025-05-27 22:21:09,162 - __main__ - INFO - Progreso: 3060/8101 notas procesadas (37.8%)
+2025-05-27 22:21:43,150 - __main__ - INFO - Progreso: 3080/8101 notas procesadas (38.0%)
+2025-05-27 22:22:16,007 - __main__ - INFO - Progreso: 3100/8101 notas procesadas (38.3%)
+2025-05-27 22:22:48,861 - __main__ - INFO - Progreso: 3120/8101 notas procesadas (38.5%)
+2025-05-27 22:23:21,550 - __main__ - INFO - Progreso: 3140/8101 notas procesadas (38.8%)
+2025-05-27 22:23:54,224 - __main__ - INFO - Progreso: 3160/8101 notas procesadas (39.0%)
+2025-05-27 22:24:26,971 - __main__ - INFO - Progreso: 3180/8101 notas procesadas (39.3%)
+2025-05-27 22:24:59,677 - __main__ - INFO - Progreso: 3200/8101 notas procesadas (39.5%)
+2025-05-27 22:25:32,465 - __main__ - INFO - Progreso: 3220/8101 notas procesadas (39.7%)
+2025-05-27 22:26:05,686 - __main__ - INFO - Progreso: 3240/8101 notas procesadas (40.0%)
+2025-05-27 22:26:40,632 - __main__ - INFO - Progreso: 3260/8101 notas procesadas (40.2%)
+2025-05-27 22:27:15,593 - __main__ - INFO - Progreso: 3280/8101 notas procesadas (40.5%)
+2025-05-27 22:27:50,500 - __main__ - INFO - Progreso: 3300/8101 notas procesadas (40.7%)
+2025-05-27 22:28:25,286 - __main__ - INFO - Progreso: 3320/8101 notas procesadas (41.0%)
+2025-05-27 22:28:59,845 - __main__ - INFO - Progreso: 3340/8101 notas procesadas (41.2%)
+2025-05-27 22:29:31,341 - __main__ - INFO - Progreso: 3360/8101 notas procesadas (41.5%)
+2025-05-27 22:30:03,279 - __main__ - INFO - Progreso: 3380/8101 notas procesadas (41.7%)
+2025-05-27 22:30:42,983 - __main__ - INFO - Progreso: 3400/8101 notas procesadas (42.0%)
+2025-05-27 22:31:14,791 - __main__ - INFO - Progreso: 3420/8101 notas procesadas (42.2%)
+2025-05-27 22:31:47,008 - __main__ - INFO - Progreso: 3440/8101 notas procesadas (42.5%)
+2025-05-27 22:32:18,657 - __main__ - INFO - Progreso: 3460/8101 notas procesadas (42.7%)
+2025-05-27 22:32:50,143 - __main__ - INFO - Progreso: 3480/8101 notas procesadas (43.0%)
+2025-05-27 22:33:25,353 - __main__ - INFO - Progreso: 3500/8101 notas procesadas (43.2%)
+2025-05-27 22:33:56,860 - __main__ - INFO - Progreso: 3520/8101 notas procesadas (43.5%)
+2025-05-27 22:34:28,630 - __main__ - INFO - Progreso: 3540/8101 notas procesadas (43.7%)
+2025-05-27 22:35:00,247 - __main__ - INFO - Progreso: 3560/8101 notas procesadas (43.9%)
+2025-05-27 22:35:31,915 - __main__ - INFO - Progreso: 3580/8101 notas procesadas (44.2%)
+2025-05-27 22:36:03,678 - __main__ - INFO - Progreso: 3600/8101 notas procesadas (44.4%)
+2025-05-27 22:36:35,534 - __main__ - INFO - Progreso: 3620/8101 notas procesadas (44.7%)
+2025-05-27 22:37:07,332 - __main__ - INFO - Progreso: 3640/8101 notas procesadas (44.9%)
+2025-05-27 22:37:39,033 - __main__ - INFO - Progreso: 3660/8101 notas procesadas (45.2%)
+2025-05-27 22:38:10,710 - __main__ - INFO - Progreso: 3680/8101 notas procesadas (45.4%)
+2025-05-27 22:38:43,229 - __main__ - INFO - Progreso: 3700/8101 notas procesadas (45.7%)
+2025-05-27 22:39:15,184 - __main__ - INFO - Progreso: 3720/8101 notas procesadas (45.9%)
+2025-05-27 22:39:46,887 - __main__ - INFO - Progreso: 3740/8101 notas procesadas (46.2%)
+2025-05-27 22:40:18,740 - __main__ - INFO - Progreso: 3760/8101 notas procesadas (46.4%)
+2025-05-27 22:40:50,456 - __main__ - INFO - Progreso: 3780/8101 notas procesadas (46.7%)
+2025-05-27 22:41:24,076 - __main__ - INFO - Progreso: 3800/8101 notas procesadas (46.9%)
+2025-05-27 22:41:57,012 - __main__ - INFO - Progreso: 3820/8101 notas procesadas (47.2%)
+2025-05-27 22:42:30,318 - __main__ - INFO - Progreso: 3840/8101 notas procesadas (47.4%)
+2025-05-27 22:43:05,230 - __main__ - INFO - Progreso: 3860/8101 notas procesadas (47.6%)
+2025-05-27 22:43:40,093 - __main__ - INFO - Progreso: 3880/8101 notas procesadas (47.9%)
+2025-05-27 22:44:13,467 - __main__ - INFO - Progreso: 3900/8101 notas procesadas (48.1%)
+2025-05-27 22:44:45,138 - __main__ - INFO - Progreso: 3920/8101 notas procesadas (48.4%)
+2025-05-27 22:45:16,847 - __main__ - INFO - Progreso: 3940/8101 notas procesadas (48.6%)
+2025-05-27 22:45:56,012 - __main__ - INFO - Progreso: 3960/8101 notas procesadas (48.9%)
+2025-05-27 22:46:27,855 - __main__ - INFO - Progreso: 3980/8101 notas procesadas (49.1%)
+2025-05-27 22:46:59,572 - __main__ - INFO - Progreso: 4000/8101 notas procesadas (49.4%)
+2025-05-27 22:47:31,479 - __main__ - INFO - Progreso: 4020/8101 notas procesadas (49.6%)
+2025-05-27 22:48:03,736 - __main__ - INFO - Progreso: 4040/8101 notas procesadas (49.9%)
+2025-05-27 22:48:35,348 - __main__ - INFO - Progreso: 4060/8101 notas procesadas (50.1%)
+2025-05-27 22:49:07,412 - __main__ - INFO - Progreso: 4080/8101 notas procesadas (50.4%)
+2025-05-27 22:49:39,262 - __main__ - INFO - Progreso: 4100/8101 notas procesadas (50.6%)
+2025-05-27 22:50:11,309 - __main__ - INFO - Progreso: 4120/8101 notas procesadas (50.9%)
+2025-05-27 22:50:44,369 - __main__ - INFO - Progreso: 4140/8101 notas procesadas (51.1%)
+2025-05-27 22:51:16,115 - __main__ - INFO - Progreso: 4160/8101 notas procesadas (51.4%)
+2025-05-27 22:51:48,526 - __main__ - INFO - Progreso: 4180/8101 notas procesadas (51.6%)
+2025-05-27 22:52:20,549 - __main__ - INFO - Progreso: 4200/8101 notas procesadas (51.8%)
+2025-05-27 22:52:52,465 - __main__ - INFO - Progreso: 4220/8101 notas procesadas (52.1%)
+2025-05-27 22:53:24,236 - __main__ - INFO - Progreso: 4240/8101 notas procesadas (52.3%)
+2025-05-27 22:53:56,436 - __main__ - INFO - Progreso: 4260/8101 notas procesadas (52.6%)
+2025-05-27 22:54:28,084 - __main__ - INFO - Progreso: 4280/8101 notas procesadas (52.8%)
+2025-05-27 22:54:59,955 - __main__ - INFO - Progreso: 4300/8101 notas procesadas (53.1%)
+2025-05-27 22:55:32,209 - __main__ - INFO - Progreso: 4320/8101 notas procesadas (53.3%)
+2025-05-27 22:56:03,850 - __main__ - INFO - Progreso: 4340/8101 notas procesadas (53.6%)
+2025-05-27 22:56:35,638 - __main__ - INFO - Progreso: 4360/8101 notas procesadas (53.8%)
+2025-05-27 22:57:07,721 - __main__ - INFO - Progreso: 4380/8101 notas procesadas (54.1%)
+2025-05-27 22:57:39,559 - __main__ - INFO - Progreso: 4400/8101 notas procesadas (54.3%)
+2025-05-27 22:58:11,512 - __main__ - INFO - Progreso: 4420/8101 notas procesadas (54.6%)
+2025-05-27 22:58:43,139 - __main__ - INFO - Progreso: 4440/8101 notas procesadas (54.8%)
+2025-05-27 22:59:14,705 - __main__ - INFO - Progreso: 4460/8101 notas procesadas (55.1%)
+2025-05-27 22:59:46,317 - __main__ - INFO - Progreso: 4480/8101 notas procesadas (55.3%)
+2025-05-27 23:00:18,081 - __main__ - INFO - Progreso: 4500/8101 notas procesadas (55.5%)
+2025-05-27 23:00:49,660 - __main__ - INFO - Progreso: 4520/8101 notas procesadas (55.8%)
+2025-05-27 23:01:21,290 - __main__ - INFO - Progreso: 4540/8101 notas procesadas (56.0%)
+2025-05-27 23:01:52,869 - __main__ - INFO - Progreso: 4560/8101 notas procesadas (56.3%)
+2025-05-27 23:02:27,156 - __main__ - INFO - Progreso: 4580/8101 notas procesadas (56.5%)
+2025-05-27 23:02:59,202 - __main__ - INFO - Progreso: 4600/8101 notas procesadas (56.8%)
+2025-05-27 23:03:30,741 - __main__ - INFO - Progreso: 4620/8101 notas procesadas (57.0%)
+2025-05-27 23:04:02,300 - __main__ - INFO - Progreso: 4640/8101 notas procesadas (57.3%)
+2025-05-27 23:04:33,887 - __main__ - INFO - Progreso: 4660/8101 notas procesadas (57.5%)
+2025-05-27 23:05:05,460 - __main__ - INFO - Progreso: 4680/8101 notas procesadas (57.8%)
+2025-05-27 23:05:36,988 - __main__ - INFO - Progreso: 4700/8101 notas procesadas (58.0%)
+2025-05-27 23:06:08,733 - __main__ - INFO - Progreso: 4720/8101 notas procesadas (58.3%)
+2025-05-27 23:06:40,328 - __main__ - INFO - Progreso: 4740/8101 notas procesadas (58.5%)
+2025-05-27 23:07:11,953 - __main__ - INFO - Progreso: 4760/8101 notas procesadas (58.8%)
+2025-05-27 23:07:43,525 - __main__ - INFO - Progreso: 4780/8101 notas procesadas (59.0%)
+2025-05-27 23:08:15,082 - __main__ - INFO - Progreso: 4800/8101 notas procesadas (59.3%)
+2025-05-27 23:08:48,971 - __main__ - INFO - Progreso: 4820/8101 notas procesadas (59.5%)
+2025-05-27 23:09:24,267 - __main__ - INFO - Progreso: 4840/8101 notas procesadas (59.7%)
+2025-05-27 23:09:58,747 - __main__ - INFO - Progreso: 4860/8101 notas procesadas (60.0%)
+2025-05-27 23:10:32,271 - __main__ - INFO - Progreso: 4880/8101 notas procesadas (60.2%)
+2025-05-27 23:11:05,275 - __main__ - INFO - Progreso: 4900/8101 notas procesadas (60.5%)
+2025-05-27 23:11:42,620 - __main__ - INFO - Progreso: 4920/8101 notas procesadas (60.7%)
+2025-05-27 23:12:14,088 - __main__ - INFO - Progreso: 4940/8101 notas procesadas (61.0%)
+2025-05-27 23:12:45,675 - __main__ - INFO - Progreso: 4960/8101 notas procesadas (61.2%)
+2025-05-27 23:13:17,155 - __main__ - INFO - Progreso: 4980/8101 notas procesadas (61.5%)
+2025-05-27 23:13:48,623 - __main__ - INFO - Progreso: 5000/8101 notas procesadas (61.7%)
+2025-05-27 23:14:20,139 - __main__ - INFO - Progreso: 5020/8101 notas procesadas (62.0%)
+2025-05-27 23:14:51,773 - __main__ - INFO - Progreso: 5040/8101 notas procesadas (62.2%)
+2025-05-27 23:15:23,523 - __main__ - INFO - Progreso: 5060/8101 notas procesadas (62.5%)
+2025-05-27 23:15:55,115 - __main__ - INFO - Progreso: 5080/8101 notas procesadas (62.7%)
+2025-05-27 23:16:26,710 - __main__ - INFO - Progreso: 5100/8101 notas procesadas (63.0%)
+2025-05-27 23:16:58,271 - __main__ - INFO - Progreso: 5120/8101 notas procesadas (63.2%)
+2025-05-27 23:17:30,394 - __main__ - INFO - Progreso: 5140/8101 notas procesadas (63.4%)
+2025-05-27 23:18:05,214 - __main__ - INFO - Progreso: 5160/8101 notas procesadas (63.7%)
+2025-05-27 23:18:40,873 - __main__ - INFO - Progreso: 5180/8101 notas procesadas (63.9%)
+2025-05-27 23:19:15,693 - __main__ - INFO - Progreso: 5200/8101 notas procesadas (64.2%)
+2025-05-27 23:19:50,740 - __main__ - INFO - Progreso: 5220/8101 notas procesadas (64.4%)
+2025-05-27 23:20:25,538 - __main__ - INFO - Progreso: 5240/8101 notas procesadas (64.7%)
+2025-05-27 23:21:00,259 - __main__ - INFO - Progreso: 5260/8101 notas procesadas (64.9%)
+2025-05-27 23:21:34,981 - __main__ - INFO - Progreso: 5280/8101 notas procesadas (65.2%)
+2025-05-27 23:22:08,511 - __main__ - INFO - Progreso: 5300/8101 notas procesadas (65.4%)
+2025-05-27 23:22:40,017 - __main__ - INFO - Progreso: 5320/8101 notas procesadas (65.7%)
+2025-05-27 23:23:11,642 - __main__ - INFO - Progreso: 5340/8101 notas procesadas (65.9%)
+2025-05-27 23:23:43,219 - __main__ - INFO - Progreso: 5360/8101 notas procesadas (66.2%)
+2025-05-27 23:24:14,704 - __main__ - INFO - Progreso: 5380/8101 notas procesadas (66.4%)
+2025-05-27 23:24:46,399 - __main__ - INFO - Progreso: 5400/8101 notas procesadas (66.7%)
+2025-05-27 23:25:17,905 - __main__ - INFO - Progreso: 5420/8101 notas procesadas (66.9%)
+2025-05-27 23:25:49,502 - __main__ - INFO - Progreso: 5440/8101 notas procesadas (67.2%)
+2025-05-27 23:26:21,116 - __main__ - INFO - Progreso: 5460/8101 notas procesadas (67.4%)
+2025-05-27 23:26:52,872 - __main__ - INFO - Progreso: 5480/8101 notas procesadas (67.6%)
+2025-05-27 23:27:24,811 - __main__ - INFO - Progreso: 5500/8101 notas procesadas (67.9%)
+2025-05-27 23:27:56,391 - __main__ - INFO - Progreso: 5520/8101 notas procesadas (68.1%)
+2025-05-27 23:28:28,036 - __main__ - INFO - Progreso: 5540/8101 notas procesadas (68.4%)
+2025-05-27 23:28:59,703 - __main__ - INFO - Progreso: 5560/8101 notas procesadas (68.6%)
+2025-05-27 23:29:31,808 - __main__ - INFO - Progreso: 5580/8101 notas procesadas (68.9%)
+2025-05-27 23:30:06,801 - __main__ - INFO - Progreso: 5600/8101 notas procesadas (69.1%)
+2025-05-27 23:30:41,742 - __main__ - INFO - Progreso: 5620/8101 notas procesadas (69.4%)
+2025-05-27 23:31:16,820 - __main__ - INFO - Progreso: 5640/8101 notas procesadas (69.6%)
+2025-05-27 23:31:51,746 - __main__ - INFO - Progreso: 5660/8101 notas procesadas (69.9%)
+2025-05-27 23:32:26,668 - __main__ - INFO - Progreso: 5680/8101 notas procesadas (70.1%)
+2025-05-27 23:32:59,758 - __main__ - INFO - Progreso: 5700/8101 notas procesadas (70.4%)
+2025-05-27 23:33:32,690 - __main__ - INFO - Progreso: 5720/8101 notas procesadas (70.6%)
+2025-05-27 23:34:06,146 - __main__ - INFO - Progreso: 5740/8101 notas procesadas (70.9%)
+2025-05-27 23:34:41,163 - __main__ - INFO - Progreso: 5760/8101 notas procesadas (71.1%)
+2025-05-27 23:35:16,210 - __main__ - INFO - Progreso: 5780/8101 notas procesadas (71.3%)
+2025-05-27 23:35:49,636 - __main__ - INFO - Progreso: 5800/8101 notas procesadas (71.6%)
+2025-05-27 23:36:22,448 - __main__ - INFO - Progreso: 5820/8101 notas procesadas (71.8%)
+2025-05-27 23:36:55,209 - __main__ - INFO - Progreso: 5840/8101 notas procesadas (72.1%)
+2025-05-27 23:37:28,042 - __main__ - INFO - Progreso: 5860/8101 notas procesadas (72.3%)
+2025-05-27 23:38:00,827 - __main__ - INFO - Progreso: 5880/8101 notas procesadas (72.6%)
+2025-05-27 23:38:33,371 - __main__ - INFO - Progreso: 5900/8101 notas procesadas (72.8%)
+2025-05-27 23:39:05,078 - __main__ - INFO - Progreso: 5920/8101 notas procesadas (73.1%)
+2025-05-27 23:39:36,661 - __main__ - INFO - Progreso: 5940/8101 notas procesadas (73.3%)
+2025-05-27 23:40:08,279 - __main__ - INFO - Progreso: 5960/8101 notas procesadas (73.6%)
+2025-05-27 23:40:40,059 - __main__ - INFO - Progreso: 5980/8101 notas procesadas (73.8%)
+2025-05-27 23:41:11,655 - __main__ - INFO - Progreso: 6000/8101 notas procesadas (74.1%)
+2025-05-27 23:41:43,278 - __main__ - INFO - Progreso: 6020/8101 notas procesadas (74.3%)
+2025-05-27 23:42:14,965 - __main__ - INFO - Progreso: 6040/8101 notas procesadas (74.6%)
+2025-05-27 23:42:46,619 - __main__ - INFO - Progreso: 6060/8101 notas procesadas (74.8%)
+2025-05-27 23:43:18,258 - __main__ - INFO - Progreso: 6080/8101 notas procesadas (75.1%)
+2025-05-27 23:43:49,919 - __main__ - INFO - Progreso: 6100/8101 notas procesadas (75.3%)
+2025-05-27 23:44:21,642 - __main__ - INFO - Progreso: 6120/8101 notas procesadas (75.5%)
+2025-05-27 23:44:53,390 - __main__ - INFO - Progreso: 6140/8101 notas procesadas (75.8%)
+2025-05-27 23:45:25,264 - __main__ - INFO - Progreso: 6160/8101 notas procesadas (76.0%)
+2025-05-27 23:45:57,116 - __main__ - INFO - Progreso: 6180/8101 notas procesadas (76.3%)
+2025-05-27 23:46:29,053 - __main__ - INFO - Progreso: 6200/8101 notas procesadas (76.5%)
+2025-05-27 23:47:00,765 - __main__ - INFO - Progreso: 6220/8101 notas procesadas (76.8%)
+2025-05-27 23:47:32,495 - __main__ - INFO - Progreso: 6240/8101 notas procesadas (77.0%)
+2025-05-27 23:48:04,236 - __main__ - INFO - Progreso: 6260/8101 notas procesadas (77.3%)
+2025-05-27 23:48:35,918 - __main__ - INFO - Progreso: 6280/8101 notas procesadas (77.5%)
+2025-05-27 23:49:07,552 - __main__ - INFO - Progreso: 6300/8101 notas procesadas (77.8%)
+2025-05-27 23:49:39,495 - __main__ - INFO - Progreso: 6320/8101 notas procesadas (78.0%)
+2025-05-27 23:50:11,176 - __main__ - INFO - Progreso: 6340/8101 notas procesadas (78.3%)
+2025-05-27 23:50:43,162 - __main__ - INFO - Progreso: 6360/8101 notas procesadas (78.5%)
+2025-05-27 23:51:14,971 - __main__ - INFO - Progreso: 6380/8101 notas procesadas (78.8%)
+2025-05-27 23:51:46,565 - __main__ - INFO - Progreso: 6400/8101 notas procesadas (79.0%)
+2025-05-27 23:52:18,748 - __main__ - INFO - Progreso: 6420/8101 notas procesadas (79.2%)
+2025-05-27 23:52:50,288 - __main__ - INFO - Progreso: 6440/8101 notas procesadas (79.5%)
+2025-05-27 23:53:22,301 - __main__ - INFO - Progreso: 6460/8101 notas procesadas (79.7%)
+2025-05-27 23:53:54,027 - __main__ - INFO - Progreso: 6480/8101 notas procesadas (80.0%)
+2025-05-27 23:54:25,656 - __main__ - INFO - Progreso: 6500/8101 notas procesadas (80.2%)
+2025-05-27 23:54:57,196 - __main__ - INFO - Progreso: 6520/8101 notas procesadas (80.5%)
+2025-05-27 23:55:28,835 - __main__ - INFO - Progreso: 6540/8101 notas procesadas (80.7%)
+2025-05-27 23:56:00,351 - __main__ - INFO - Progreso: 6560/8101 notas procesadas (81.0%)
+2025-05-27 23:56:31,785 - __main__ - INFO - Progreso: 6580/8101 notas procesadas (81.2%)
+2025-05-27 23:57:03,226 - __main__ - INFO - Progreso: 6600/8101 notas procesadas (81.5%)
+2025-05-27 23:57:34,672 - __main__ - INFO - Progreso: 6620/8101 notas procesadas (81.7%)
+2025-05-27 23:58:06,132 - __main__ - INFO - Progreso: 6640/8101 notas procesadas (82.0%)
+2025-05-27 23:58:37,628 - __main__ - INFO - Progreso: 6660/8101 notas procesadas (82.2%)
+2025-05-27 23:59:09,175 - __main__ - INFO - Progreso: 6680/8101 notas procesadas (82.5%)
+2025-05-27 23:59:40,692 - __main__ - INFO - Progreso: 6700/8101 notas procesadas (82.7%)
+2025-05-28 00:00:12,189 - __main__ - INFO - Progreso: 6720/8101 notas procesadas (83.0%)
+2025-05-28 00:00:44,069 - __main__ - INFO - Progreso: 6740/8101 notas procesadas (83.2%)
+2025-05-28 00:01:15,634 - __main__ - INFO - Progreso: 6760/8101 notas procesadas (83.4%)
+2025-05-28 00:01:47,252 - __main__ - INFO - Progreso: 6780/8101 notas procesadas (83.7%)
+2025-05-28 00:02:19,083 - __main__ - INFO - Progreso: 6800/8101 notas procesadas (83.9%)
+2025-05-28 00:02:51,068 - __main__ - INFO - Progreso: 6820/8101 notas procesadas (84.2%)
+2025-05-28 00:03:22,600 - __main__ - INFO - Progreso: 6840/8101 notas procesadas (84.4%)
+2025-05-28 00:03:54,100 - __main__ - INFO - Progreso: 6860/8101 notas procesadas (84.7%)
+2025-05-28 00:04:25,703 - __main__ - INFO - Progreso: 6880/8101 notas procesadas (84.9%)
+2025-05-28 00:04:57,321 - __main__ - INFO - Progreso: 6900/8101 notas procesadas (85.2%)
+2025-05-28 00:05:28,997 - __main__ - INFO - Progreso: 6920/8101 notas procesadas (85.4%)
+2025-05-28 00:06:00,694 - __main__ - INFO - Progreso: 6940/8101 notas procesadas (85.7%)
+2025-05-28 00:06:32,192 - __main__ - INFO - Progreso: 6960/8101 notas procesadas (85.9%)
+2025-05-28 00:07:03,707 - __main__ - INFO - Progreso: 6980/8101 notas procesadas (86.2%)
+2025-05-28 00:07:35,208 - __main__ - INFO - Progreso: 7000/8101 notas procesadas (86.4%)
+2025-05-28 00:08:06,873 - __main__ - INFO - Progreso: 7020/8101 notas procesadas (86.7%)
+2025-05-28 00:08:38,320 - __main__ - INFO - Progreso: 7040/8101 notas procesadas (86.9%)
+2025-05-28 00:09:09,768 - __main__ - INFO - Progreso: 7060/8101 notas procesadas (87.1%)
+2025-05-28 00:09:41,265 - __main__ - INFO - Progreso: 7080/8101 notas procesadas (87.4%)
+2025-05-28 00:10:12,710 - __main__ - INFO - Progreso: 7100/8101 notas procesadas (87.6%)
+2025-05-28 00:10:44,157 - __main__ - INFO - Progreso: 7120/8101 notas procesadas (87.9%)
+2025-05-28 00:11:15,643 - __main__ - INFO - Progreso: 7140/8101 notas procesadas (88.1%)
+2025-05-28 00:11:47,158 - __main__ - INFO - Progreso: 7160/8101 notas procesadas (88.4%)
+2025-05-28 00:12:18,679 - __main__ - INFO - Progreso: 7180/8101 notas procesadas (88.6%)
+2025-05-28 00:12:50,180 - __main__ - INFO - Progreso: 7200/8101 notas procesadas (88.9%)
+2025-05-28 00:13:21,896 - __main__ - INFO - Progreso: 7220/8101 notas procesadas (89.1%)
+2025-05-28 00:13:53,482 - __main__ - INFO - Progreso: 7240/8101 notas procesadas (89.4%)
+2025-05-28 00:14:24,946 - __main__ - INFO - Progreso: 7260/8101 notas procesadas (89.6%)
+2025-05-28 00:14:56,395 - __main__ - INFO - Progreso: 7280/8101 notas procesadas (89.9%)
+2025-05-28 00:15:27,937 - __main__ - INFO - Progreso: 7300/8101 notas procesadas (90.1%)
+2025-05-28 00:15:59,412 - __main__ - INFO - Progreso: 7320/8101 notas procesadas (90.4%)
+2025-05-28 00:16:30,855 - __main__ - INFO - Progreso: 7340/8101 notas procesadas (90.6%)
+2025-05-28 00:17:02,298 - __main__ - INFO - Progreso: 7360/8101 notas procesadas (90.9%)
+2025-05-28 00:17:33,770 - __main__ - INFO - Progreso: 7380/8101 notas procesadas (91.1%)
+2025-05-28 00:18:05,225 - __main__ - INFO - Progreso: 7400/8101 notas procesadas (91.3%)
+2025-05-28 00:18:36,710 - __main__ - INFO - Progreso: 7420/8101 notas procesadas (91.6%)
+2025-05-28 00:19:08,249 - __main__ - INFO - Progreso: 7440/8101 notas procesadas (91.8%)
+2025-05-28 00:19:39,727 - __main__ - INFO - Progreso: 7460/8101 notas procesadas (92.1%)
+2025-05-28 00:20:11,510 - __main__ - INFO - Progreso: 7480/8101 notas procesadas (92.3%)
+2025-05-28 00:20:42,983 - __main__ - INFO - Progreso: 7500/8101 notas procesadas (92.6%)
+2025-05-28 00:21:14,584 - __main__ - INFO - Progreso: 7520/8101 notas procesadas (92.8%)
+2025-05-28 00:21:46,204 - __main__ - INFO - Progreso: 7540/8101 notas procesadas (93.1%)
+2025-05-28 00:22:17,833 - __main__ - INFO - Progreso: 7560/8101 notas procesadas (93.3%)
+2025-05-28 00:22:49,556 - __main__ - INFO - Progreso: 7580/8101 notas procesadas (93.6%)
+2025-05-28 00:23:21,154 - __main__ - INFO - Progreso: 7600/8101 notas procesadas (93.8%)
+2025-05-28 00:23:52,807 - __main__ - INFO - Progreso: 7620/8101 notas procesadas (94.1%)
+2025-05-28 00:24:24,410 - __main__ - INFO - Progreso: 7640/8101 notas procesadas (94.3%)
+2025-05-28 00:24:56,062 - __main__ - INFO - Progreso: 7660/8101 notas procesadas (94.6%)
+2025-05-28 00:25:27,800 - __main__ - INFO - Progreso: 7680/8101 notas procesadas (94.8%)
+2025-05-28 00:25:59,399 - __main__ - INFO - Progreso: 7700/8101 notas procesadas (95.0%)
+2025-05-28 00:26:31,133 - __main__ - INFO - Progreso: 7720/8101 notas procesadas (95.3%)
+2025-05-28 00:27:04,007 - __main__ - INFO - Progreso: 7740/8101 notas procesadas (95.5%)
+2025-05-28 00:27:36,733 - __main__ - INFO - Progreso: 7760/8101 notas procesadas (95.8%)
+2025-05-28 00:28:09,741 - __main__ - INFO - Progreso: 7780/8101 notas procesadas (96.0%)
+2025-05-28 00:28:44,588 - __main__ - INFO - Progreso: 7800/8101 notas procesadas (96.3%)
+2025-05-28 00:29:19,504 - __main__ - INFO - Progreso: 7820/8101 notas procesadas (96.5%)
+2025-05-28 00:29:52,258 - __main__ - INFO - Progreso: 7840/8101 notas procesadas (96.8%)
+2025-05-28 00:30:23,976 - __main__ - INFO - Progreso: 7860/8101 notas procesadas (97.0%)
+2025-05-28 00:30:55,624 - __main__ - INFO - Progreso: 7880/8101 notas procesadas (97.3%)
+2025-05-28 00:31:27,978 - __main__ - INFO - Progreso: 7900/8101 notas procesadas (97.5%)
+2025-05-28 00:32:00,566 - __main__ - INFO - Progreso: 7920/8101 notas procesadas (97.8%)
+2025-05-28 00:32:33,226 - __main__ - INFO - Progreso: 7940/8101 notas procesadas (98.0%)
+2025-05-28 00:33:08,033 - __main__ - INFO - Progreso: 7960/8101 notas procesadas (98.3%)
+2025-05-28 00:33:42,948 - __main__ - INFO - Progreso: 7980/8101 notas procesadas (98.5%)
+2025-05-28 00:34:24,012 - __main__ - INFO - Progreso: 8000/8101 notas procesadas (98.8%)
+2025-05-28 00:34:58,862 - __main__ - INFO - Progreso: 8020/8101 notas procesadas (99.0%)
+2025-05-28 00:35:33,937 - __main__ - INFO - Progreso: 8040/8101 notas procesadas (99.2%)
+2025-05-28 00:36:05,577 - __main__ - INFO - Progreso: 8060/8101 notas procesadas (99.5%)
+2025-05-28 00:36:37,560 - __main__ - INFO - Progreso: 8080/8101 notas procesadas (99.7%)
+2025-05-28 00:37:09,180 - __main__ - INFO - Progreso: 8100/8101 notas procesadas (100.0%)
+2025-05-28 00:37:10,766 - __main__ - INFO - Progreso: 8101/8101 notas procesadas (100.0%)
+2025-05-28 00:37:10,766 - __main__ - INFO - Entrenando modelo RandomForest con 8101 características...
+2025-05-28 00:37:11,754 - __main__ - INFO - Modelo general entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_general.pkl
+2025-05-28 00:37:11,777 - __main__ - INFO - Iniciando entrenamiento de modelos por materia...
+2025-05-28 00:37:12,045 - __main__ - INFO - Se encontraron 15 materias con suficientes datos para entrenar
+2025-05-28 00:37:12,311 - __main__ - INFO - [1/15] Procesando materia: Matematicas Primaria (ID: 11)
+2025-05-28 00:37:12,575 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 00:37:46,779 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 00:38:18,640 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 00:38:50,282 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 00:39:21,859 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 00:39:53,590 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 00:40:25,402 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 00:40:58,620 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 00:41:30,219 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 00:42:01,945 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 00:42:33,592 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 00:43:05,179 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 00:43:36,867 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 00:44:08,462 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 00:44:40,074 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 00:45:11,664 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 00:45:43,463 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 00:46:15,089 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 00:46:46,773 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 00:47:18,524 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 00:47:50,351 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 00:48:22,494 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 00:48:54,375 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 00:49:25,960 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 00:49:57,534 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 00:50:35,847 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 00:51:30,571 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 00:52:26,440 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 00:52:26,440 - __main__ - INFO -   Entrenando modelo para materia Matematicas Primaria con 540 registros...
+2025-05-28 00:52:26,572 - __main__ - INFO -   Modelo para materia Matematicas Primaria entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_11.pkl
+2025-05-28 00:52:26,573 - __main__ - INFO - Progreso general: 1/15 materias (6.7%)
+2025-05-28 00:52:26,573 - __main__ - INFO - [2/15] Procesando materia: Química (ID: 9)
+2025-05-28 00:52:27,005 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 00:53:15,041 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 00:53:46,610 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 00:54:18,195 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 00:54:49,784 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 00:55:21,359 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 00:55:52,982 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 00:56:24,573 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 00:56:56,175 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 00:57:27,766 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 00:57:59,413 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 00:58:31,982 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 00:59:04,799 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 00:59:37,599 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 01:00:10,401 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 01:01:00,250 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 01:01:47,489 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 01:02:34,343 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 01:03:18,589 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 01:03:58,870 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 01:04:44,937 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 01:05:33,780 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 01:06:19,370 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 01:06:51,219 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 01:07:22,803 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 01:07:54,346 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 01:08:25,851 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 01:08:57,423 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 01:08:57,442 - __main__ - INFO -   Entrenando modelo para materia Química con 540 registros...
+2025-05-28 01:08:57,784 - __main__ - INFO -   Modelo para materia Química entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_9.pkl
+2025-05-28 01:08:57,785 - __main__ - INFO - Progreso general: 2/15 materias (13.3%)
+2025-05-28 01:08:57,785 - __main__ - INFO - [3/15] Procesando materia: Religion (ID: 15)
+2025-05-28 01:08:58,049 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 01:09:30,274 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 01:10:01,783 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 01:10:33,374 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 01:11:04,930 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 01:11:36,477 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 01:12:08,037 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 01:12:39,603 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 01:13:11,177 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 01:13:43,001 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 01:14:14,517 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 01:14:46,050 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 01:15:17,587 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 01:15:49,120 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 01:16:20,629 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 01:16:53,576 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 01:17:25,107 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 01:17:57,298 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 01:18:42,586 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 01:19:35,753 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 01:21:02,746 - __main__ - WARNING - Error procesando nota ID 5590 para materia Religion: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2025-05-28 01:21:02,747 - __main__ - WARNING - Error procesando nota ID 5595 para materia Religion: connection already closed
+2025-05-28 01:21:02,747 - __main__ - WARNING - Error procesando nota ID 5600 para materia Religion: connection already closed
+2025-05-28 01:21:02,748 - __main__ - WARNING - Error procesando nota ID 5605 para materia Religion: connection already closed
+2025-05-28 01:21:02,748 - __main__ - WARNING - Error procesando nota ID 5610 para materia Religion: connection already closed
+2025-05-28 01:21:02,749 - __main__ - WARNING - Error procesando nota ID 5615 para materia Religion: connection already closed
+2025-05-28 01:21:02,749 - __main__ - WARNING - Error procesando nota ID 5620 para materia Religion: connection already closed
+2025-05-28 01:21:02,749 - __main__ - WARNING - Error procesando nota ID 5625 para materia Religion: connection already closed
+2025-05-28 01:21:02,750 - __main__ - WARNING - Error procesando nota ID 5630 para materia Religion: connection already closed
+2025-05-28 01:21:02,750 - __main__ - WARNING - Error procesando nota ID 5635 para materia Religion: connection already closed
+2025-05-28 01:21:02,750 - __main__ - WARNING - Error procesando nota ID 5640 para materia Religion: connection already closed
+2025-05-28 01:21:02,751 - __main__ - WARNING - Error procesando nota ID 5645 para materia Religion: connection already closed
+2025-05-28 01:21:02,751 - __main__ - WARNING - Error procesando nota ID 5650 para materia Religion: connection already closed
+2025-05-28 01:21:02,751 - __main__ - WARNING - Error procesando nota ID 5655 para materia Religion: connection already closed
+2025-05-28 01:21:02,752 - __main__ - WARNING - Error procesando nota ID 5660 para materia Religion: connection already closed
+2025-05-28 01:21:02,752 - __main__ - WARNING - Error procesando nota ID 5665 para materia Religion: connection already closed
+2025-05-28 01:21:02,752 - __main__ - WARNING - Error procesando nota ID 5670 para materia Religion: connection already closed
+2025-05-28 01:21:02,752 - __main__ - WARNING - Error procesando nota ID 5675 para materia Religion: connection already closed
+2025-05-28 01:21:02,753 - __main__ - WARNING - Error procesando nota ID 5680 para materia Religion: connection already closed
+2025-05-28 01:21:02,753 - __main__ - WARNING - Error procesando nota ID 5685 para materia Religion: connection already closed
+2025-05-28 01:21:02,753 - __main__ - WARNING - Error procesando nota ID 5690 para materia Religion: connection already closed
+2025-05-28 01:21:02,754 - __main__ - WARNING - Error procesando nota ID 5695 para materia Religion: connection already closed
+2025-05-28 01:21:02,754 - __main__ - WARNING - Error procesando nota ID 5700 para materia Religion: connection already closed
+2025-05-28 01:21:02,754 - __main__ - WARNING - Error procesando nota ID 5705 para materia Religion: connection already closed
+2025-05-28 01:21:02,755 - __main__ - WARNING - Error procesando nota ID 5710 para materia Religion: connection already closed
+2025-05-28 01:21:02,755 - __main__ - WARNING - Error procesando nota ID 5715 para materia Religion: connection already closed
+2025-05-28 01:21:02,756 - __main__ - WARNING - Error procesando nota ID 5720 para materia Religion: connection already closed
+2025-05-28 01:21:02,756 - __main__ - WARNING - Error procesando nota ID 5725 para materia Religion: connection already closed
+2025-05-28 01:21:02,756 - __main__ - WARNING - Error procesando nota ID 5730 para materia Religion: connection already closed
+2025-05-28 01:21:02,756 - __main__ - WARNING - Error procesando nota ID 5735 para materia Religion: connection already closed
+2025-05-28 01:21:02,757 - __main__ - WARNING - Error procesando nota ID 5740 para materia Religion: connection already closed
+2025-05-28 01:21:02,757 - __main__ - WARNING - Error procesando nota ID 5745 para materia Religion: connection already closed
+2025-05-28 01:21:02,757 - __main__ - WARNING - Error procesando nota ID 5750 para materia Religion: connection already closed
+2025-05-28 01:21:02,758 - __main__ - WARNING - Error procesando nota ID 5755 para materia Religion: connection already closed
+2025-05-28 01:21:02,758 - __main__ - WARNING - Error procesando nota ID 5760 para materia Religion: connection already closed
+2025-05-28 01:21:02,758 - __main__ - WARNING - Error procesando nota ID 5765 para materia Religion: connection already closed
+2025-05-28 01:21:02,758 - __main__ - WARNING - Error procesando nota ID 5770 para materia Religion: connection already closed
+2025-05-28 01:21:02,759 - __main__ - WARNING - Error procesando nota ID 5775 para materia Religion: connection already closed
+2025-05-28 01:21:02,759 - __main__ - WARNING - Error procesando nota ID 5780 para materia Religion: connection already closed
+2025-05-28 01:21:02,759 - __main__ - WARNING - Error procesando nota ID 5785 para materia Religion: connection already closed
+2025-05-28 01:21:02,759 - __main__ - WARNING - Error procesando nota ID 5790 para materia Religion: connection already closed
+2025-05-28 01:21:02,760 - __main__ - WARNING - Error procesando nota ID 5795 para materia Religion: connection already closed
+2025-05-28 01:21:02,760 - __main__ - WARNING - Error procesando nota ID 5800 para materia Religion: connection already closed
+2025-05-28 01:21:02,761 - __main__ - WARNING - Error procesando nota ID 5805 para materia Religion: connection already closed
+2025-05-28 01:21:02,761 - __main__ - WARNING - Error procesando nota ID 5810 para materia Religion: connection already closed
+2025-05-28 01:21:02,761 - __main__ - WARNING - Error procesando nota ID 5815 para materia Religion: connection already closed
+2025-05-28 01:21:02,762 - __main__ - WARNING - Error procesando nota ID 5820 para materia Religion: connection already closed
+2025-05-28 01:21:02,762 - __main__ - WARNING - Error procesando nota ID 5825 para materia Religion: connection already closed
+2025-05-28 01:21:02,762 - __main__ - WARNING - Error procesando nota ID 5830 para materia Religion: connection already closed
+2025-05-28 01:21:02,763 - __main__ - WARNING - Error procesando nota ID 5835 para materia Religion: connection already closed
+2025-05-28 01:21:02,763 - __main__ - WARNING - Error procesando nota ID 5840 para materia Religion: connection already closed
+2025-05-28 01:21:02,764 - __main__ - WARNING - Error procesando nota ID 5845 para materia Religion: connection already closed
+2025-05-28 01:21:02,764 - __main__ - WARNING - Error procesando nota ID 5850 para materia Religion: connection already closed
+2025-05-28 01:21:02,764 - __main__ - WARNING - Error procesando nota ID 5855 para materia Religion: connection already closed
+2025-05-28 01:21:02,765 - __main__ - WARNING - Error procesando nota ID 5860 para materia Religion: connection already closed
+2025-05-28 01:21:02,765 - __main__ - WARNING - Error procesando nota ID 5865 para materia Religion: connection already closed
+2025-05-28 01:21:02,766 - __main__ - WARNING - Error procesando nota ID 5870 para materia Religion: connection already closed
+2025-05-28 01:21:02,766 - __main__ - WARNING - Error procesando nota ID 5875 para materia Religion: connection already closed
+2025-05-28 01:21:02,766 - __main__ - WARNING - Error procesando nota ID 5880 para materia Religion: connection already closed
+2025-05-28 01:21:02,767 - __main__ - WARNING - Error procesando nota ID 5885 para materia Religion: connection already closed
+2025-05-28 01:21:02,767 - __main__ - WARNING - Error procesando nota ID 5890 para materia Religion: connection already closed
+2025-05-28 01:21:02,768 - __main__ - WARNING - Error procesando nota ID 5895 para materia Religion: connection already closed
+2025-05-28 01:21:02,768 - __main__ - WARNING - Error procesando nota ID 5900 para materia Religion: connection already closed
+2025-05-28 01:21:02,769 - __main__ - WARNING - Error procesando nota ID 5905 para materia Religion: connection already closed
+2025-05-28 01:21:02,769 - __main__ - WARNING - Error procesando nota ID 5910 para materia Religion: connection already closed
+2025-05-28 01:21:02,769 - __main__ - WARNING - Error procesando nota ID 5915 para materia Religion: connection already closed
+2025-05-28 01:21:02,770 - __main__ - WARNING - Error procesando nota ID 5920 para materia Religion: connection already closed
+2025-05-28 01:21:02,770 - __main__ - WARNING - Error procesando nota ID 5925 para materia Religion: connection already closed
+2025-05-28 01:21:02,771 - __main__ - WARNING - Error procesando nota ID 5930 para materia Religion: connection already closed
+2025-05-28 01:21:02,771 - __main__ - WARNING - Error procesando nota ID 5935 para materia Religion: connection already closed
+2025-05-28 01:21:02,771 - __main__ - WARNING - Error procesando nota ID 5940 para materia Religion: connection already closed
+2025-05-28 01:21:02,772 - __main__ - WARNING - Error procesando nota ID 5945 para materia Religion: connection already closed
+2025-05-28 01:21:02,772 - __main__ - WARNING - Error procesando nota ID 5950 para materia Religion: connection already closed
+2025-05-28 01:21:02,773 - __main__ - WARNING - Error procesando nota ID 5955 para materia Religion: connection already closed
+2025-05-28 01:21:02,773 - __main__ - WARNING - Error procesando nota ID 5960 para materia Religion: connection already closed
+2025-05-28 01:21:02,773 - __main__ - WARNING - Error procesando nota ID 5965 para materia Religion: connection already closed
+2025-05-28 01:21:02,773 - __main__ - WARNING - Error procesando nota ID 5970 para materia Religion: connection already closed
+2025-05-28 01:21:02,774 - __main__ - WARNING - Error procesando nota ID 5975 para materia Religion: connection already closed
+2025-05-28 01:21:02,774 - __main__ - WARNING - Error procesando nota ID 5980 para materia Religion: connection already closed
+2025-05-28 01:21:02,774 - __main__ - WARNING - Error procesando nota ID 5985 para materia Religion: connection already closed
+2025-05-28 01:21:02,775 - __main__ - WARNING - Error procesando nota ID 5990 para materia Religion: connection already closed
+2025-05-28 01:21:02,775 - __main__ - WARNING - Error procesando nota ID 5995 para materia Religion: connection already closed
+2025-05-28 01:21:02,775 - __main__ - WARNING - Error procesando nota ID 6000 para materia Religion: connection already closed
+2025-05-28 01:21:02,775 - __main__ - WARNING - Error procesando nota ID 6005 para materia Religion: connection already closed
+2025-05-28 01:21:02,776 - __main__ - WARNING - Error procesando nota ID 6010 para materia Religion: connection already closed
+2025-05-28 01:21:02,776 - __main__ - WARNING - Error procesando nota ID 6015 para materia Religion: connection already closed
+2025-05-28 01:21:02,777 - __main__ - WARNING - Error procesando nota ID 6020 para materia Religion: connection already closed
+2025-05-28 01:21:02,777 - __main__ - WARNING - Error procesando nota ID 6025 para materia Religion: connection already closed
+2025-05-28 01:21:02,777 - __main__ - WARNING - Error procesando nota ID 6030 para materia Religion: connection already closed
+2025-05-28 01:21:02,777 - __main__ - WARNING - Error procesando nota ID 6035 para materia Religion: connection already closed
+2025-05-28 01:21:02,777 - __main__ - WARNING - Error procesando nota ID 6040 para materia Religion: connection already closed
+2025-05-28 01:21:02,778 - __main__ - WARNING - Error procesando nota ID 6045 para materia Religion: connection already closed
+2025-05-28 01:21:02,779 - __main__ - WARNING - Error procesando nota ID 6050 para materia Religion: connection already closed
+2025-05-28 01:21:02,779 - __main__ - WARNING - Error procesando nota ID 6055 para materia Religion: connection already closed
+2025-05-28 01:21:02,779 - __main__ - WARNING - Error procesando nota ID 6060 para materia Religion: connection already closed
+2025-05-28 01:21:02,780 - __main__ - WARNING - Error procesando nota ID 6065 para materia Religion: connection already closed
+2025-05-28 01:21:02,780 - __main__ - WARNING - Error procesando nota ID 6070 para materia Religion: connection already closed
+2025-05-28 01:21:02,780 - __main__ - WARNING - Error procesando nota ID 6075 para materia Religion: connection already closed
+2025-05-28 01:21:02,781 - __main__ - WARNING - Error procesando nota ID 6080 para materia Religion: connection already closed
+2025-05-28 01:21:02,781 - __main__ - WARNING - Error procesando nota ID 6085 para materia Religion: connection already closed
+2025-05-28 01:21:02,781 - __main__ - WARNING - Error procesando nota ID 6090 para materia Religion: connection already closed
+2025-05-28 01:21:02,781 - __main__ - WARNING - Error procesando nota ID 6095 para materia Religion: connection already closed
+2025-05-28 01:21:02,782 - __main__ - WARNING - Error procesando nota ID 6100 para materia Religion: connection already closed
+2025-05-28 01:21:02,782 - __main__ - WARNING - Error procesando nota ID 6105 para materia Religion: connection already closed
+2025-05-28 01:21:02,782 - __main__ - WARNING - Error procesando nota ID 6110 para materia Religion: connection already closed
+2025-05-28 01:21:02,782 - __main__ - WARNING - Error procesando nota ID 6115 para materia Religion: connection already closed
+2025-05-28 01:21:02,783 - __main__ - WARNING - Error procesando nota ID 6120 para materia Religion: connection already closed
+2025-05-28 01:21:02,783 - __main__ - WARNING - Error procesando nota ID 6125 para materia Religion: connection already closed
+2025-05-28 01:21:02,783 - __main__ - WARNING - Error procesando nota ID 6130 para materia Religion: connection already closed
+2025-05-28 01:21:02,784 - __main__ - WARNING - Error procesando nota ID 6135 para materia Religion: connection already closed
+2025-05-28 01:21:02,784 - __main__ - WARNING - Error procesando nota ID 6140 para materia Religion: connection already closed
+2025-05-28 01:21:02,785 - __main__ - WARNING - Error procesando nota ID 6145 para materia Religion: connection already closed
+2025-05-28 01:21:02,785 - __main__ - WARNING - Error procesando nota ID 6150 para materia Religion: connection already closed
+2025-05-28 01:21:02,785 - __main__ - WARNING - Error procesando nota ID 6155 para materia Religion: connection already closed
+2025-05-28 01:21:02,786 - __main__ - WARNING - Error procesando nota ID 6160 para materia Religion: connection already closed
+2025-05-28 01:21:02,786 - __main__ - WARNING - Error procesando nota ID 6165 para materia Religion: connection already closed
+2025-05-28 01:21:02,786 - __main__ - WARNING - Error procesando nota ID 6170 para materia Religion: connection already closed
+2025-05-28 01:21:02,787 - __main__ - WARNING - Error procesando nota ID 6175 para materia Religion: connection already closed
+2025-05-28 01:21:02,787 - __main__ - WARNING - Error procesando nota ID 6180 para materia Religion: connection already closed
+2025-05-28 01:21:02,787 - __main__ - WARNING - Error procesando nota ID 6185 para materia Religion: connection already closed
+2025-05-28 01:21:02,787 - __main__ - WARNING - Error procesando nota ID 6190 para materia Religion: connection already closed
+2025-05-28 01:21:02,787 - __main__ - WARNING - Error procesando nota ID 6195 para materia Religion: connection already closed
+2025-05-28 01:21:02,788 - __main__ - WARNING - Error procesando nota ID 6200 para materia Religion: connection already closed
+2025-05-28 01:21:02,788 - __main__ - WARNING - Error procesando nota ID 6205 para materia Religion: connection already closed
+2025-05-28 01:21:02,789 - __main__ - WARNING - Error procesando nota ID 6210 para materia Religion: connection already closed
+2025-05-28 01:21:02,789 - __main__ - WARNING - Error procesando nota ID 6215 para materia Religion: connection already closed
+2025-05-28 01:21:02,789 - __main__ - WARNING - Error procesando nota ID 6220 para materia Religion: connection already closed
+2025-05-28 01:21:02,790 - __main__ - WARNING - Error procesando nota ID 6225 para materia Religion: connection already closed
+2025-05-28 01:21:02,790 - __main__ - WARNING - Error procesando nota ID 6230 para materia Religion: connection already closed
+2025-05-28 01:21:02,791 - __main__ - WARNING - Error procesando nota ID 6235 para materia Religion: connection already closed
+2025-05-28 01:21:02,791 - __main__ - WARNING - Error procesando nota ID 6240 para materia Religion: connection already closed
+2025-05-28 01:21:02,791 - __main__ - WARNING - Error procesando nota ID 6245 para materia Religion: connection already closed
+2025-05-28 01:21:02,792 - __main__ - WARNING - Error procesando nota ID 6250 para materia Religion: connection already closed
+2025-05-28 01:21:02,792 - __main__ - WARNING - Error procesando nota ID 6255 para materia Religion: connection already closed
+2025-05-28 01:21:02,792 - __main__ - WARNING - Error procesando nota ID 6260 para materia Religion: connection already closed
+2025-05-28 01:21:02,792 - __main__ - WARNING - Error procesando nota ID 6265 para materia Religion: connection already closed
+2025-05-28 01:21:02,793 - __main__ - WARNING - Error procesando nota ID 6270 para materia Religion: connection already closed
+2025-05-28 01:21:02,793 - __main__ - WARNING - Error procesando nota ID 6275 para materia Religion: connection already closed
+2025-05-28 01:21:02,794 - __main__ - WARNING - Error procesando nota ID 6280 para materia Religion: connection already closed
+2025-05-28 01:21:02,794 - __main__ - WARNING - Error procesando nota ID 6285 para materia Religion: connection already closed
+2025-05-28 01:21:02,794 - __main__ - WARNING - Error procesando nota ID 6290 para materia Religion: connection already closed
+2025-05-28 01:21:02,794 - __main__ - WARNING - Error procesando nota ID 6295 para materia Religion: connection already closed
+2025-05-28 01:21:02,795 - __main__ - WARNING - Error procesando nota ID 6300 para materia Religion: connection already closed
+2025-05-28 01:21:02,795 - __main__ - INFO -   Entrenando modelo para materia Religion con 397 registros...
+2025-05-28 01:21:02,905 - __main__ - INFO -   Modelo para materia Religion entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_15.pkl
+2025-05-28 01:21:02,905 - __main__ - INFO - Progreso general: 3/15 materias (20.0%)
+2025-05-28 01:21:02,905 - __main__ - INFO - [4/15] Procesando materia: Literatura (ID: 3)
+2025-05-28 01:21:02,906 - __main__ - ERROR - Error procesando materia Literatura: connection already closed
+2025-05-28 01:21:02,915 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,916 - __main__ - INFO - Progreso general: 4/15 materias (26.7%)
+2025-05-28 01:21:02,916 - __main__ - INFO - [5/15] Procesando materia: Biología (ID: 5)
+2025-05-28 01:21:02,916 - __main__ - ERROR - Error procesando materia Biología: connection already closed
+2025-05-28 01:21:02,917 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,919 - __main__ - INFO - Progreso general: 5/15 materias (33.3%)
+2025-05-28 01:21:02,919 - __main__ - INFO - [6/15] Procesando materia: Inglés (ID: 4)
+2025-05-28 01:21:02,919 - __main__ - ERROR - Error procesando materia Inglés: connection already closed
+2025-05-28 01:21:02,920 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,921 - __main__ - INFO - Progreso general: 6/15 materias (40.0%)
+2025-05-28 01:21:02,921 - __main__ - INFO - [7/15] Procesando materia: Psicología (ID: 10)
+2025-05-28 01:21:02,921 - __main__ - ERROR - Error procesando materia Psicología: connection already closed
+2025-05-28 01:21:02,922 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,922 - __main__ - INFO - Progreso general: 7/15 materias (46.7%)
+2025-05-28 01:21:02,922 - __main__ - INFO - [8/15] Procesando materia: Artes Plásticas (ID: 6)
+2025-05-28 01:21:02,923 - __main__ - ERROR - Error procesando materia Artes Plásticas: connection already closed
+2025-05-28 01:21:02,924 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,925 - __main__ - INFO - Progreso general: 8/15 materias (53.3%)
+2025-05-28 01:21:02,925 - __main__ - INFO - [9/15] Procesando materia: Educacion Fisica Primaria (ID: 14)
+2025-05-28 01:21:02,925 - __main__ - ERROR - Error procesando materia Educacion Fisica Primaria: connection already closed
+2025-05-28 01:21:02,926 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,927 - __main__ - INFO - Progreso general: 9/15 materias (60.0%)
+2025-05-28 01:21:02,927 - __main__ - INFO - [10/15] Procesando materia: Artes Plasticas Primaria (ID: 13)
+2025-05-28 01:21:02,927 - __main__ - ERROR - Error procesando materia Artes Plasticas Primaria: connection already closed
+2025-05-28 01:21:02,928 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,929 - __main__ - INFO - Progreso general: 10/15 materias (66.7%)
+2025-05-28 01:21:02,929 - __main__ - INFO - [11/15] Procesando materia: Matemáticas (ID: 2)
+2025-05-28 01:21:02,929 - __main__ - ERROR - Error procesando materia Matemáticas: connection already closed
+2025-05-28 01:21:02,930 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,931 - __main__ - INFO - Progreso general: 11/15 materias (73.3%)
+2025-05-28 01:21:02,931 - __main__ - INFO - [12/15] Procesando materia: Educación Física (ID: 7)
+2025-05-28 01:21:02,932 - __main__ - ERROR - Error procesando materia Educación Física: connection already closed
+2025-05-28 01:21:02,933 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,934 - __main__ - INFO - Progreso general: 12/15 materias (80.0%)
+2025-05-28 01:21:02,934 - __main__ - INFO - [13/15] Procesando materia: Literatura Primaria (ID: 12)
+2025-05-28 01:21:02,935 - __main__ - ERROR - Error procesando materia Literatura Primaria: connection already closed
+2025-05-28 01:21:02,936 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,936 - __main__ - INFO - Progreso general: 13/15 materias (86.7%)
+2025-05-28 01:21:02,937 - __main__ - INFO - [14/15] Procesando materia: Historia (ID: 1)
+2025-05-28 01:21:02,937 - __main__ - ERROR - Error procesando materia Historia: connection already closed
+2025-05-28 01:21:02,937 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,938 - __main__ - INFO - Progreso general: 14/15 materias (93.3%)
+2025-05-28 01:21:02,939 - __main__ - INFO - [15/15] Procesando materia: Física (ID: 8)
+2025-05-28 01:21:02,939 - __main__ - ERROR - Error procesando materia Física: connection already closed
+2025-05-28 01:21:02,940 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 177, in entrenar_modelos_por_materia
+    total_notas_materia = notas.count()
+                          ^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 01:21:02,941 - __main__ - INFO - Progreso general: 15/15 materias (100.0%)
+2025-05-28 01:21:02,941 - __main__ - INFO - Procesamiento completado: 15 materias procesadas, 3 modelos entrenados
+2025-05-28 01:21:02,941 - __main__ - INFO - Generando metadatos del entrenamiento...
+2025-05-28 01:21:02,941 - __main__ - ERROR - Error durante el proceso de entrenamiento: connection already closed
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 315, in <module>
+    metadata = generar_metadatos_entrenamiento()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 281, in generar_metadatos_entrenamiento
+    'total_notas': Nota.objects.count(),
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+2025-05-28 01:21:02,945 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 315, in <module>
+    metadata = generar_metadatos_entrenamiento()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\backend\scripts\entrenador_modelo.py", line 281, in generar_metadatos_entrenamiento
+    'total_notas': Nota.objects.count(),
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 297, in _cursor
+    with self.wrap_database_errors:
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\base\base.py", line 298, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andres\PycharmProjects\aula_inteligente\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 429, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+
+2025-05-28 03:37:36,006 - __main__ - INFO - === INICIO DEL PROCESO DE ENTRENAMIENTO ===
+2025-05-28 03:37:36,007 - __main__ - INFO - El modelo general ya existe en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_general.pkl. Saltando entrenamiento.
+2025-05-28 03:37:36,071 - __main__ - INFO - Iniciando entrenamiento de modelos por materia...
+2025-05-28 03:37:38,528 - __main__ - INFO - Se encontraron 15 materias con suficientes datos para entrenar
+2025-05-28 03:37:38,793 - __main__ - INFO - [1/15] Procesando materia: Matematicas Primaria (ID: 11)
+2025-05-28 03:37:38,794 - __main__ - INFO -   El modelo para materia Matematicas Primaria ya existe en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_11.pkl. Saltando entrenamiento.
+2025-05-28 03:37:38,794 - __main__ - INFO - Progreso general: 1/15 materias (6.7%)
+2025-05-28 03:37:38,795 - __main__ - INFO - [2/15] Procesando materia: Química (ID: 9)
+2025-05-28 03:37:38,795 - __main__ - INFO -   El modelo para materia Química ya existe en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_9.pkl. Saltando entrenamiento.
+2025-05-28 03:37:38,795 - __main__ - INFO - Progreso general: 2/15 materias (13.3%)
+2025-05-28 03:37:38,795 - __main__ - INFO - [3/15] Procesando materia: Religion (ID: 15)
+2025-05-28 03:37:38,795 - __main__ - INFO -   El modelo para materia Religion ya existe en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_15.pkl. Saltando entrenamiento.
+2025-05-28 03:37:38,796 - __main__ - INFO - Progreso general: 3/15 materias (20.0%)
+2025-05-28 03:37:38,796 - __main__ - INFO - [4/15] Procesando materia: Literatura (ID: 3)
+2025-05-28 03:37:39,059 - __main__ - INFO -   - 541 notas encontradas para esta materia
+2025-05-28 03:38:11,305 - __main__ - INFO -     Progreso: 20/541 notas procesadas (3.7%)
+2025-05-28 03:38:42,938 - __main__ - INFO -     Progreso: 40/541 notas procesadas (7.4%)
+2025-05-28 03:39:14,841 - __main__ - INFO -     Progreso: 60/541 notas procesadas (11.1%)
+2025-05-28 03:39:46,445 - __main__ - INFO -     Progreso: 80/541 notas procesadas (14.8%)
+2025-05-28 03:40:17,921 - __main__ - INFO -     Progreso: 100/541 notas procesadas (18.5%)
+2025-05-28 03:40:49,452 - __main__ - INFO -     Progreso: 120/541 notas procesadas (22.2%)
+2025-05-28 03:41:20,895 - __main__ - INFO -     Progreso: 140/541 notas procesadas (25.9%)
+2025-05-28 03:41:52,310 - __main__ - INFO -     Progreso: 160/541 notas procesadas (29.6%)
+2025-05-28 03:42:23,731 - __main__ - INFO -     Progreso: 180/541 notas procesadas (33.3%)
+2025-05-28 03:42:55,117 - __main__ - INFO -     Progreso: 200/541 notas procesadas (37.0%)
+2025-05-28 03:43:26,520 - __main__ - INFO -     Progreso: 220/541 notas procesadas (40.7%)
+2025-05-28 03:43:58,301 - __main__ - INFO -     Progreso: 240/541 notas procesadas (44.4%)
+2025-05-28 03:44:29,715 - __main__ - INFO -     Progreso: 260/541 notas procesadas (48.1%)
+2025-05-28 03:45:01,286 - __main__ - INFO -     Progreso: 280/541 notas procesadas (51.8%)
+2025-05-28 03:45:32,928 - __main__ - INFO -     Progreso: 300/541 notas procesadas (55.5%)
+2025-05-28 03:46:04,506 - __main__ - INFO -     Progreso: 320/541 notas procesadas (59.1%)
+2025-05-28 03:46:36,412 - __main__ - INFO -     Progreso: 340/541 notas procesadas (62.8%)
+2025-05-28 03:47:08,421 - __main__ - INFO -     Progreso: 360/541 notas procesadas (66.5%)
+2025-05-28 03:47:40,302 - __main__ - INFO -     Progreso: 380/541 notas procesadas (70.2%)
+2025-05-28 03:48:12,398 - __main__ - INFO -     Progreso: 400/541 notas procesadas (73.9%)
+2025-05-28 03:48:44,180 - __main__ - INFO -     Progreso: 420/541 notas procesadas (77.6%)
+2025-05-28 03:49:21,949 - __main__ - INFO -     Progreso: 440/541 notas procesadas (81.3%)
+2025-05-28 03:49:56,040 - __main__ - INFO -     Progreso: 460/541 notas procesadas (85.0%)
+2025-05-28 03:50:39,128 - __main__ - INFO -     Progreso: 480/541 notas procesadas (88.7%)
+2025-05-28 03:51:10,646 - __main__ - INFO -     Progreso: 500/541 notas procesadas (92.4%)
+2025-05-28 03:51:42,016 - __main__ - INFO -     Progreso: 520/541 notas procesadas (96.1%)
+2025-05-28 03:52:13,376 - __main__ - INFO -     Progreso: 540/541 notas procesadas (99.8%)
+2025-05-28 03:52:14,943 - __main__ - INFO -   Entrenando modelo para materia Literatura con 541 registros...
+2025-05-28 03:52:15,064 - __main__ - INFO -   Modelo para materia Literatura entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_3.pkl
+2025-05-28 03:52:15,064 - __main__ - INFO - Progreso general: 4/15 materias (26.7%)
+2025-05-28 03:52:15,065 - __main__ - INFO - [5/15] Procesando materia: Biología (ID: 5)
+2025-05-28 03:52:15,326 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 03:52:48,089 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 03:53:22,204 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 03:53:56,373 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 03:54:29,570 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 03:55:02,445 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 03:55:35,259 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 03:56:08,068 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 03:56:41,173 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 03:57:13,869 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 03:57:45,374 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 03:58:16,990 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 03:58:48,493 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 03:59:20,003 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 03:59:51,492 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 04:00:23,003 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 04:00:54,537 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 04:01:26,070 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 04:01:57,572 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 04:02:29,088 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 04:03:00,608 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 04:03:37,116 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 04:04:11,663 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 04:04:44,222 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 04:05:28,283 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 04:06:15,576 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 04:07:03,182 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 04:07:51,629 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 04:07:51,630 - __main__ - INFO -   Entrenando modelo para materia Biología con 540 registros...
+2025-05-28 04:07:51,793 - __main__ - INFO -   Modelo para materia Biología entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_5.pkl
+2025-05-28 04:07:51,793 - __main__ - INFO - Progreso general: 5/15 materias (33.3%)
+2025-05-28 04:07:51,794 - __main__ - INFO - [6/15] Procesando materia: Inglés (ID: 4)
+2025-05-28 04:07:52,142 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 04:08:28,095 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 04:08:59,665 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 04:09:31,221 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 04:10:02,814 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 04:10:34,443 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 04:11:08,555 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 04:11:42,897 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 04:12:16,840 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 04:12:51,692 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 04:13:40,204 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 04:14:31,003 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 04:15:19,187 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 04:16:06,625 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 04:16:54,544 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 04:17:44,235 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 04:18:43,495 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 04:19:30,667 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 04:20:02,231 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 04:20:33,885 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 04:21:05,492 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 04:21:37,071 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 04:22:08,660 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 04:22:40,214 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 04:23:11,782 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 04:23:43,343 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 04:24:14,889 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 04:24:46,438 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 04:24:46,438 - __main__ - INFO -   Entrenando modelo para materia Inglés con 540 registros...
+2025-05-28 04:24:46,555 - __main__ - INFO -   Modelo para materia Inglés entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_4.pkl
+2025-05-28 04:24:46,555 - __main__ - INFO - Progreso general: 6/15 materias (40.0%)
+2025-05-28 04:24:46,555 - __main__ - INFO - [7/15] Procesando materia: Psicología (ID: 10)
+2025-05-28 04:24:46,820 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 04:25:19,062 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 04:25:50,631 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 04:26:22,359 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 04:26:53,940 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 04:27:25,513 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 04:27:57,080 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 04:28:28,646 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 04:29:00,228 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 04:29:31,831 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 04:30:03,435 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 04:30:35,055 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 04:31:06,608 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 04:31:38,211 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 04:32:10,023 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 04:32:41,594 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 04:33:13,205 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 04:33:44,756 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 04:34:16,337 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 04:34:47,925 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 04:35:19,473 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 04:35:51,074 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 04:36:22,589 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 04:36:53,992 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 04:37:25,406 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 04:37:56,909 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 04:38:28,400 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 04:38:59,978 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 04:38:59,979 - __main__ - INFO -   Entrenando modelo para materia Psicología con 540 registros...
+2025-05-28 04:39:00,099 - __main__ - INFO -   Modelo para materia Psicología entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_10.pkl
+2025-05-28 04:39:00,099 - __main__ - INFO - Progreso general: 7/15 materias (46.7%)
+2025-05-28 04:39:00,100 - __main__ - INFO - [8/15] Procesando materia: Artes Plásticas (ID: 6)
+2025-05-28 04:39:00,363 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 04:39:32,367 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 04:40:03,925 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 04:40:35,887 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 04:41:07,775 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 04:41:39,541 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 04:42:11,260 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 04:42:42,982 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 04:43:14,599 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 04:43:46,246 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 04:44:17,924 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 04:44:49,649 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 04:45:21,382 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 04:45:53,159 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 04:46:24,963 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 04:46:57,822 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 04:47:32,080 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 04:48:06,351 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 04:48:40,470 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 04:49:14,734 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 04:49:48,356 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 04:50:19,943 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 04:50:51,484 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 04:51:23,016 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 04:51:54,392 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 04:52:25,834 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 04:52:57,221 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 04:53:28,636 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 04:53:28,637 - __main__ - INFO -   Entrenando modelo para materia Artes Plásticas con 540 registros...
+2025-05-28 04:53:28,758 - __main__ - INFO -   Modelo para materia Artes Plásticas entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_6.pkl
+2025-05-28 04:53:28,758 - __main__ - INFO - Progreso general: 8/15 materias (53.3%)
+2025-05-28 04:53:28,759 - __main__ - INFO - [9/15] Procesando materia: Educacion Fisica Primaria (ID: 14)
+2025-05-28 04:53:29,022 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 04:54:00,877 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 04:54:32,462 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 04:55:03,867 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 04:55:35,279 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 04:56:06,663 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 04:56:38,043 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 04:57:09,432 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 04:57:40,839 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 04:58:12,214 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 04:58:43,614 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 04:59:15,212 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 04:59:46,585 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 05:00:17,983 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 05:00:49,382 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 05:01:20,796 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 05:01:52,180 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 05:02:23,552 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 05:02:54,945 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 05:03:26,336 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 05:03:57,705 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 05:04:29,114 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 05:05:00,545 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 05:05:32,010 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 05:06:03,443 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 05:06:36,409 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 05:07:10,273 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 05:07:44,160 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 05:07:44,161 - __main__ - INFO -   Entrenando modelo para materia Educacion Fisica Primaria con 540 registros...
+2025-05-28 05:07:44,277 - __main__ - INFO -   Modelo para materia Educacion Fisica Primaria entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_14.pkl
+2025-05-28 05:07:44,277 - __main__ - INFO - Progreso general: 9/15 materias (60.0%)
+2025-05-28 05:07:44,278 - __main__ - INFO - [10/15] Procesando materia: Artes Plasticas Primaria (ID: 13)
+2025-05-28 05:07:44,561 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 05:08:18,943 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 05:08:52,819 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 05:09:26,699 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 05:10:00,572 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 05:10:34,464 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 05:11:06,712 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 05:11:38,280 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 05:12:09,845 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 05:12:41,413 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 05:13:13,012 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 05:13:44,607 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 05:14:16,192 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 05:14:47,784 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 05:15:19,384 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 05:15:50,985 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 05:16:22,767 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 05:16:54,510 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 05:17:26,112 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 05:17:57,703 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 05:18:29,289 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 05:19:00,879 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 05:19:32,468 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 05:20:04,069 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 05:20:35,642 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 05:21:07,238 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 05:21:38,773 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 05:22:10,308 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 05:22:10,309 - __main__ - INFO -   Entrenando modelo para materia Artes Plasticas Primaria con 540 registros...
+2025-05-28 05:22:10,426 - __main__ - INFO -   Modelo para materia Artes Plasticas Primaria entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_13.pkl
+2025-05-28 05:22:10,426 - __main__ - INFO - Progreso general: 10/15 materias (66.7%)
+2025-05-28 05:22:10,426 - __main__ - INFO - [11/15] Procesando materia: Matemáticas (ID: 2)
+2025-05-28 05:22:10,690 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 05:22:42,673 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 05:23:14,216 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 05:23:45,757 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 05:24:17,304 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 05:24:48,830 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 05:25:20,361 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 05:25:51,909 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 05:26:23,452 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 05:26:55,009 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 05:27:26,682 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 05:27:58,257 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 05:28:29,810 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 05:29:01,369 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 05:29:32,935 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 05:30:04,483 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 05:30:36,023 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 05:31:07,565 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 05:31:39,101 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 05:32:10,658 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 05:32:42,209 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 05:33:13,763 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 05:33:45,312 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 05:34:16,867 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 05:34:48,427 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 05:35:20,116 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 05:35:51,765 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 05:36:23,354 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 05:36:23,355 - __main__ - INFO -   Entrenando modelo para materia Matemáticas con 540 registros...
+2025-05-28 05:36:23,472 - __main__ - INFO -   Modelo para materia Matemáticas entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_2.pkl
+2025-05-28 05:36:23,472 - __main__ - INFO - Progreso general: 11/15 materias (73.3%)
+2025-05-28 05:36:23,472 - __main__ - INFO - [12/15] Procesando materia: Educación Física (ID: 7)
+2025-05-28 05:36:23,736 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 05:36:55,752 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 05:37:27,350 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 05:37:58,930 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 05:38:30,824 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 05:39:02,391 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 05:39:33,985 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 05:40:05,561 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 05:40:37,137 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 05:41:08,717 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 05:41:40,299 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 05:42:12,185 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 05:42:43,776 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 05:43:15,353 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 05:43:46,985 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 05:44:18,593 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 05:44:50,185 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 05:45:21,756 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 05:45:53,333 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 05:46:24,904 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 05:46:56,492 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 05:47:28,081 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 05:47:59,690 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 05:48:31,317 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 05:49:02,904 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 05:49:34,492 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 05:50:06,068 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 05:50:37,670 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 05:50:37,671 - __main__ - INFO -   Entrenando modelo para materia Educación Física con 540 registros...
+2025-05-28 05:50:37,789 - __main__ - INFO -   Modelo para materia Educación Física entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_7.pkl
+2025-05-28 05:50:37,789 - __main__ - INFO - Progreso general: 12/15 materias (80.0%)
+2025-05-28 05:50:37,789 - __main__ - INFO - [13/15] Procesando materia: Literatura Primaria (ID: 12)
+2025-05-28 05:50:38,053 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 05:51:10,069 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 05:51:41,669 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 05:52:13,241 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 05:52:44,847 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 05:53:16,419 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 05:53:48,050 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 05:54:19,641 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 05:54:52,315 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 05:55:25,038 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 05:55:58,114 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 05:56:32,236 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 05:57:06,367 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 05:57:38,921 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 05:58:10,513 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 05:58:42,092 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 05:59:13,686 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 05:59:45,260 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 06:00:16,839 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 06:00:48,432 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 06:01:20,019 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 06:01:51,784 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 06:02:26,011 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 06:03:01,153 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 06:03:35,231 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 06:04:08,279 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 06:04:41,437 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 06:05:15,617 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 06:05:15,617 - __main__ - INFO -   Entrenando modelo para materia Literatura Primaria con 540 registros...
+2025-05-28 06:05:15,734 - __main__ - INFO -   Modelo para materia Literatura Primaria entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_12.pkl
+2025-05-28 06:05:15,734 - __main__ - INFO - Progreso general: 13/15 materias (86.7%)
+2025-05-28 06:05:15,734 - __main__ - INFO - [14/15] Procesando materia: Historia (ID: 1)
+2025-05-28 06:05:16,022 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 06:05:51,197 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 06:06:25,521 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 06:06:58,555 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 06:07:31,546 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 06:08:05,039 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 06:08:39,357 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 06:09:13,919 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 06:09:48,372 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 06:10:22,742 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 06:10:57,146 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 06:11:31,625 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 06:12:06,111 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 06:12:39,579 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 06:13:11,625 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 06:13:43,325 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 06:14:14,973 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 06:14:46,624 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 06:15:18,277 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 06:15:49,922 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 06:16:21,895 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 06:16:53,594 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 06:17:25,254 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 06:17:56,949 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 06:18:28,597 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 06:19:00,314 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 06:19:32,078 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 06:20:03,805 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 06:20:03,805 - __main__ - INFO -   Entrenando modelo para materia Historia con 540 registros...
+2025-05-28 06:20:03,931 - __main__ - INFO -   Modelo para materia Historia entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_1.pkl
+2025-05-28 06:20:03,931 - __main__ - INFO - Progreso general: 14/15 materias (93.3%)
+2025-05-28 06:20:03,931 - __main__ - INFO - [15/15] Procesando materia: Física (ID: 8)
+2025-05-28 06:20:04,195 - __main__ - INFO -   - 540 notas encontradas para esta materia
+2025-05-28 06:20:36,355 - __main__ - INFO -     Progreso: 20/540 notas procesadas (3.7%)
+2025-05-28 06:21:07,991 - __main__ - INFO -     Progreso: 40/540 notas procesadas (7.4%)
+2025-05-28 06:21:39,704 - __main__ - INFO -     Progreso: 60/540 notas procesadas (11.1%)
+2025-05-28 06:22:11,420 - __main__ - INFO -     Progreso: 80/540 notas procesadas (14.8%)
+2025-05-28 06:22:43,011 - __main__ - INFO -     Progreso: 100/540 notas procesadas (18.5%)
+2025-05-28 06:23:16,578 - __main__ - INFO -     Progreso: 120/540 notas procesadas (22.2%)
+2025-05-28 06:23:50,929 - __main__ - INFO -     Progreso: 140/540 notas procesadas (25.9%)
+2025-05-28 06:24:25,107 - __main__ - INFO -     Progreso: 160/540 notas procesadas (29.6%)
+2025-05-28 06:24:59,394 - __main__ - INFO -     Progreso: 180/540 notas procesadas (33.3%)
+2025-05-28 06:25:33,680 - __main__ - INFO -     Progreso: 200/540 notas procesadas (37.0%)
+2025-05-28 06:26:08,066 - __main__ - INFO -     Progreso: 220/540 notas procesadas (40.7%)
+2025-05-28 06:26:42,357 - __main__ - INFO -     Progreso: 240/540 notas procesadas (44.4%)
+2025-05-28 06:27:16,677 - __main__ - INFO -     Progreso: 260/540 notas procesadas (48.1%)
+2025-05-28 06:27:48,758 - __main__ - INFO -     Progreso: 280/540 notas procesadas (51.9%)
+2025-05-28 06:28:20,221 - __main__ - INFO -     Progreso: 300/540 notas procesadas (55.6%)
+2025-05-28 06:28:51,692 - __main__ - INFO -     Progreso: 320/540 notas procesadas (59.3%)
+2025-05-28 06:29:23,145 - __main__ - INFO -     Progreso: 340/540 notas procesadas (63.0%)
+2025-05-28 06:29:54,726 - __main__ - INFO -     Progreso: 360/540 notas procesadas (66.7%)
+2025-05-28 06:30:26,184 - __main__ - INFO -     Progreso: 380/540 notas procesadas (70.4%)
+2025-05-28 06:30:57,655 - __main__ - INFO -     Progreso: 400/540 notas procesadas (74.1%)
+2025-05-28 06:31:29,121 - __main__ - INFO -     Progreso: 420/540 notas procesadas (77.8%)
+2025-05-28 06:32:00,585 - __main__ - INFO -     Progreso: 440/540 notas procesadas (81.5%)
+2025-05-28 06:32:32,055 - __main__ - INFO -     Progreso: 460/540 notas procesadas (85.2%)
+2025-05-28 06:33:03,511 - __main__ - INFO -     Progreso: 480/540 notas procesadas (88.9%)
+2025-05-28 06:33:35,286 - __main__ - INFO -     Progreso: 500/540 notas procesadas (92.6%)
+2025-05-28 06:34:06,746 - __main__ - INFO -     Progreso: 520/540 notas procesadas (96.3%)
+2025-05-28 06:34:38,232 - __main__ - INFO -     Progreso: 540/540 notas procesadas (100.0%)
+2025-05-28 06:34:38,232 - __main__ - INFO -   Entrenando modelo para materia Física con 540 registros...
+2025-05-28 06:34:38,347 - __main__ - INFO -   Modelo para materia Física entrenado y guardado en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\modelo_materia_8.pkl
+2025-05-28 06:34:38,348 - __main__ - INFO - Progreso general: 15/15 materias (100.0%)
+2025-05-28 06:34:38,348 - __main__ - INFO - Procesamiento completado: 15 materias procesadas, 15 modelos entrenados
+2025-05-28 06:34:38,350 - __main__ - INFO - Generando metadatos del entrenamiento...
+2025-05-28 06:34:39,403 - __main__ - INFO - Metadatos de entrenamiento guardados en C:\Users\Andres\PycharmProjects\aula_inteligente\backend\models\metadata.pkl
+2025-05-28 06:34:39,403 - __main__ - INFO - === PROCESO DE ENTRENAMIENTO COMPLETADO CON ÉXITO ===

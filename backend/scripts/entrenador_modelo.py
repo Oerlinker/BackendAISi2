@@ -54,6 +54,20 @@ def entrenar_modelo_general():
     """
     Entrena un modelo general basado en todas las notas disponibles.
     """
+    model_path = os.path.join(MODELS_DIR, 'modelo_general.pkl')
+
+
+    if os.path.exists(model_path):
+        logger.info(f"El modelo general ya existe en {model_path}. Saltando entrenamiento.")
+        print(f"El modelo general ya existe en {model_path}. Saltando entrenamiento.")
+        try:
+            with open(model_path, 'rb') as f:
+                model = pickle.load(f)
+            return model
+        except Exception as e:
+            logger.warning(f"Error al cargar el modelo existente: {str(e)}. Se volverá a entrenar.")
+            print(f"Error al cargar el modelo existente: {str(e)}. Se volverá a entrenar.")
+
     logger.info("Iniciando entrenamiento del modelo general...")
     print("Iniciando entrenamiento del modelo general...")
 
@@ -75,7 +89,7 @@ def entrenar_modelo_general():
     notas_procesadas = 0
     for i, nota in enumerate(notas):
         try:
-            # Obtener asistencias para este estudiante en esta materia durante este periodo
+
             asistencias = Asistencia.objects.filter(
                 estudiante=nota.estudiante,
                 materia=nota.materia,
@@ -141,7 +155,6 @@ def entrenar_modelo_general():
     model.fit(X, y)
 
 
-    model_path = os.path.join(MODELS_DIR, 'modelo_general.pkl')
     with open(model_path, 'wb') as f:
         pickle.dump(model, f)
 
@@ -173,6 +186,18 @@ def entrenar_modelos_por_materia():
             print(f"[{i+1}/{total_materias}] Procesando materia: {materia.nombre} (ID: {materia.id})")
 
 
+            model_path = os.path.join(MODELS_DIR, f'modelo_materia_{materia.id}.pkl')
+            if os.path.exists(model_path):
+                logger.info(f"  El modelo para materia {materia.nombre} ya existe en {model_path}. Saltando entrenamiento.")
+                print(f"  El modelo para materia {materia.nombre} ya existe en {model_path}. Saltando entrenamiento.")
+                modelos_entrenados += 1
+                materias_procesadas += 1
+                porcentaje = materias_procesadas / total_materias * 100
+                logger.info(f"Progreso general: {materias_procesadas}/{total_materias} materias ({porcentaje:.1f}%)")
+                print(f"Progreso general: {materias_procesadas}/{total_materias} materias ({porcentaje:.1f}%)")
+                continue
+
+
             notas = Nota.objects.filter(materia=materia)
             total_notas_materia = notas.count()
 
@@ -185,7 +210,7 @@ def entrenar_modelos_por_materia():
 
             for j, nota in enumerate(notas):
                 try:
-                    # Obtener asistencias para este estudiante en esta materia durante este periodo
+
                     asistencias = Asistencia.objects.filter(
                         estudiante=nota.estudiante,
                         materia=nota.materia,

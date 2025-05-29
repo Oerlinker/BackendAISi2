@@ -61,3 +61,22 @@ class UserProfileSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'role', 'curso', 'curso_detail']
         read_only_fields = ['id', 'username', 'email']
+
+
+class AdminUserUpdateSerializer(serializers.ModelSerializer):
+    """
+    Serializador especial para que los administradores puedan actualizar usuarios.
+    Permite modificar más campos que el serializador normal, incluyendo role y curso.
+    """
+    curso_detail = CursoSerializer(source='curso', read_only=True)
+    
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'role', 'curso', 'curso_detail']
+        read_only_fields = ['id']  # Solo el ID no se puede modificar
+        
+    def validate(self, attrs):
+        # Si se está asignando un curso, verificar que el usuario sea estudiante
+        if 'curso' in attrs and attrs.get('curso') and attrs.get('role', self.instance.role) != 'ESTUDIANTE':
+            raise serializers.ValidationError({"curso": "Solo los estudiantes pueden ser asignados a un curso"})
+        return attrs
