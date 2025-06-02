@@ -32,20 +32,37 @@ class AsistenciaViewSet(viewsets.ModelViewSet):
         fecha_fin = self.request.query_params.get('fecha_fin')
         curso_id = self.request.query_params.get('curso')
 
-
         if estudiante_id:
             queryset = queryset.filter(estudiante__id=estudiante_id)
         if materia_id:
             queryset = queryset.filter(materia__id=materia_id)
         if fecha:
-            queryset = queryset.filter(fecha=fecha)
+
+            from datetime import datetime
+            try:
+
+                if '-' in fecha:
+                    fecha_obj = datetime.strptime(fecha, '%Y-%m-%d')
+                    fecha_formateada = fecha_obj.strftime('%Y-%m-%d')
+                    queryset = queryset.filter(fecha=fecha_formateada)
+                else:
+
+                    try:
+                        fecha_obj = datetime.strptime(fecha, '%d/%m/%Y')
+                        fecha_formateada = fecha_obj.strftime('%Y-%m-%d')
+                        queryset = queryset.filter(fecha=fecha_formateada)
+                    except ValueError:
+
+                        queryset = queryset.filter(fecha=fecha)
+            except ValueError:
+
+                queryset = queryset.filter(fecha=fecha)
         if fecha_inicio:
             queryset = queryset.filter(fecha__gte=fecha_inicio)
         if fecha_fin:
             queryset = queryset.filter(fecha__lte=fecha_fin)
         if curso_id:
             queryset = queryset.filter(estudiante__curso__id=curso_id)
-
 
         if self.action in ['list', 'retrieve']:
             queryset = queryset.select_related('estudiante', 'materia')
@@ -64,7 +81,6 @@ class AsistenciaViewSet(viewsets.ModelViewSet):
                     {"error": "Se requieren estudiante_id, materia_id y fecha"},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-
 
             try:
                 asistencia_existente = Asistencia.objects.get(
@@ -96,7 +112,6 @@ class AsistenciaViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['post'])
     def bulk_create(self, request):
 
-
         try:
             asistencias_data = request.data.get('asistencias', [])
             if not asistencias_data:
@@ -119,7 +134,6 @@ class AsistenciaViewSet(viewsets.ModelViewSet):
                         fecha = item.get('fecha')
                         presente = item.get('presente', True)
                         justificacion = item.get('justificacion', '')
-
 
                         try:
                             asistencia = Asistencia.objects.get(
@@ -147,7 +161,6 @@ class AsistenciaViewSet(viewsets.ModelViewSet):
                         continue
 
             if resultados["errores"] and resultados["creados"] == 0 and resultados["actualizados"] == 0:
-
                 return Response(
                     {"error": "No se pudo crear/actualizar ningún registro de asistencia",
                      "detalles": resultados["errores"]},
